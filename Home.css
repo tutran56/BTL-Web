@@ -8,7 +8,7 @@ body{
 .top{
      background-color: rgba(0, 0, 0, 0.412);
      height:  70px;
-     width: auto;
+     width: 100%;
      display: flex;
      position: static;
      
@@ -81,21 +81,27 @@ span.material-symbols-outlined{
 }
 /*  den phan meneu //////////////////////////////////////////////////////////////// */
 .nav{
-     display: inline-block;
+     display: flex;
      border: 2px solid black;
      box-shadow: 0 0 10px #ccc;
      width: 100%;height: 30px;
      background-color: rgba(0, 0, 0, 0.711);
      /* background-color: rgba(255, 255, 255, 0.207) */
 }
-.sanPham{
-     border: 2px solid brown;
-     border-radius: 6px;
-     width: auto;height: auto;
-     text-align: center;
-     float: left;
-     margin-left: 10em;
-     margin-top: 0.5em;
-     color: white;
+.nav_padding{
+     display: inline-block;
+     margin-left: 12%;
+     margin-top: 0.7%;
+     border: 1px solid black;
      overflow: hidden;
+     text-align: center;
+     border-radius: 4px;
+     color: brown;
+     background-color: antiquewhite;
+     height: 70%;
+     /* float: left; */
+     cursor: pointer;
+     vertical-align: middle;
+     line-height: normal;
+
 }

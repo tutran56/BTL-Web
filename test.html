@@ -1,123 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
+<style>
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  .toggle-menu {
+    box-shadow: none;
+    background: transparent;
+    border: 0;
+  }
+  
+  body {
+    background: #f1f1f1;
+    color: #272626;
+    font: normal 20px/1.6 "Noto Sans", sans-serif;
+  }
+  
+  
+  /* HEADER STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #DD3543;
+  }
+  
+  nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transition: align-items .2s;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 20px 30px;
+    background: #F35B66;
+    color: #fff;
+    margin: 50px 0 0 50px;
+    transition: all .2s;
+  }
+  
+  ul {
+    display: flex;
+    margin: 50px 50px 0 0;
+    padding: 0;
+    transition: margin .2s;
+  }
+  
+  li:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  li a {
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  .toggle-menu {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    margin: 10px 10px 0 0;
+    transition: margin .2s;
+  }
+  
+  
+  /* MAIN STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  main {
+    display: block;
+    padding: 0 20px;
+  }
+  
+  
+  /* STYLES FOR THE "scroll" CLASS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .scroll {
+    box-shadow: 0 7px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .scroll .logo {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
+  
+  .scroll nav {
+    align-items: center;
+  }
+  
+  .scroll .logo,
+  .scroll ul,
+  .scroll .toggle-menu {
+    margin: 0;
+  }
+  
+  
+  /* MQ STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  @media screen and (max-width: 1060px) {
+    header {
+      padding: 10px;
     }
-    :root {
-      --menu-color: rgba(0, 0, 0, 0.755);
-      --hed-color: white;
+    nav {
+      align-items: center;
     }
-    .hed {
-      border: 1px solid rgba(40, 24, 24, 0.332);
-      background-image: url(bg.jpg);
-      background-color: rgba(40, 24, 24, 0.332);
-      width: auto;
-      height: 5em;
-      opacity: 0.855;
-    }
-    img {
-      float: left;
-      height: 90%;
-      display: inline-block;
-      vertical-align: middle;
-      background-color: transparent;
-      width: 4.5em;
-      height: 4.5em;
-      border: 1px solid black;
-      border-radius: 200%;
-      margin-top: 0.2em;
-      margin-left: 5%;
-      opacity: 1.0;
-    }
-    h1 {
-      color: rgba(255, 255, 255, 0.937);
-      text-align: center;
-    }
-    p {
-      color: white;
-      text-align: center;
-    }
-    #logo_user.material-symbols-outlined {
-      display: inline-block;
-      font-size: 3em;
-      line-height: normal;
-      vertical-align: -6%;
-      cursor: pointer;
-      position: absolute;
-      top: 0.6em;
-      right: 2%;
-    }
-    .menu {
-      display: block;
-      background-color: var(--menu-color);
-      width: 100%;
-      height: 2em;
-      padding: 0.5em;
-    }
-    /* New element for mobile menu button */
-    #mobile_menu {
+    ul {
       display: none;
-      color: aliceblue;
-      font-size: 2em;
-      cursor: pointer;
-      position: absolute;
-      top: 0.7em;
-      right: 5%;
     }
+    .logo {
+      font-size: 1.8rem;
+      margin: 10px 0 0 10px;
+    }
+    .toggle-menu {
+      display: block;
+    }
+  }
+  
+  
+  /* STYLES FOR THE COUNTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .counter {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1px;
+    padding: 5px;
+    color: #fff;
+    background: #DD3543;
+  }
+</style>
+<header>
+  <script>
+    (function() {
 
-    @media only screen and (max-width: 768px) {
-      #home_menu, #home_Hien, .text_menu {
-        display: none;
+      'use strict';
+    
+      var m = document.querySelector("main"),
+        h = document.querySelector("header"),
+        c = document.querySelector(".counter"),
+        counter = 0,
+        hHeight;
+    
+      function setTopPadding() {
+        hHeight = h.offsetHeight;
+        m.style.paddingTop = hHeight + "px";
       }
-      #mobile_menu {
-        display: block;
+    
+      function onScroll() {
+    
+        window.addEventListener("scroll", _.throttle(callbackFunc, 200));
+        /**
+         * Replace the line above with the following one 
+         * to see how many more times the "callbackFunc" is executed
+         */
+        // window.addEventListener("scroll", callbackFunc);
+    
+        function callbackFunc() {
+          c.style.visibility = "visible";
+          c.innerHTML = counter++;
+          var y = window.pageYOffset;
+          if (y > 150) {
+            h.classList.add("scroll");
+          } else {
+            h.classList.remove("scroll");
+          }
+        }
       }
-    }
-  </style>
-</head>
-<body>
-     <!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
-     <div class="hed">
-          <div class="logo"><img src="logo.jpg" alt=""></div>
-          <h1>Coffee Place</h1>
-          <p>Vì sức khỏe vì tương lai</p>
-          <span id="logo_user" class="material-symbols-outlined">
-               account_circle
-               </span>
-     </div>
-<!--  Phan nay  la menu -->
-     <div class="menu">
-          <div id="home_Hien">
-               <div class="menu_tyle">
-               <div id="home_menu"><span class="material-symbols-outlined">
-                    home
-                    </span>
-               </div>   
-          </div>
-          <div class="text_menu">
-                    <div class="text_menu">
-                         <select name="sanpham" id="sanpham">
-                              <option value="all">San pham</option>
-                         </select></div>
-                         <div id="thongtin" class="text_menu">Thông tin</div>
-                    <div id="thucdon" class="text_menu">Thực đơn</div>
-                    <div id="tintuc" class="text_menu">Tin tức</div>
-                    <div id="lienHe" class="text_menu">Liên hệ</div>
-               </div>
-          </div>
-          <div id="home_An">
-               <span id="home_An" class="material-symbols-outlined">
-                    menu
-                    </span>
-          </div></div>
-  <!-- Your HTML content goes here -->
-</body>
-</html>
+    
+      window.onload = function() {
+        setTopPadding();
+        onScroll();
+      };
+    
+      window.onresize = function() {
+        setTopPadding();
+      };
+    })();
+  </script>
+  <nav>
+    <h1>
+      <a href="" class="logo">Logo</a>
+    </h1>
+    <ul>
+      <li><a href="">About</a></li>
+      <li><a href="">Services </a></li>
+      <li><a href="">Portfolio</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+    <button class="toggle-menu" aria-label="Responsive Navigation Menu">☰</button>
+  </nav>
+</header>
+
+<main>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis,
+  enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  <p> Eipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis.<p>
+
+  <p> ipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  </p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Eipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+</main>
+
+<div class="counter"></div>

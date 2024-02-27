@@ -21,7 +21,7 @@
                --hed-color:white;
           }
           body{
-               background-image: url('bg.jpg');
+               background-image: url('img/bg.jpg');
                box-sizing: border-box;
                background-repeat: repeat;
                
@@ -29,7 +29,7 @@
           }
           .hed{
                border: 0.1px solid rgba(40, 24, 24, 0.332);
-               background-image: url(bg1.jpg);
+               background-image: url(img/bg1.jpg);
                object-position: right ;
                width: auto;height: 5em;
                opacity:  0.855;
@@ -43,7 +43,7 @@
                height: 90%;
                display: inline-block;
                vertical-align: middle;
-               background-color: url('logo1.jpeg');
+               background-color: url('img/bg1.jpg');
                width: 4.5em;height: 4.5em;
                color: aliceblue;
                border: 1px solid black;
@@ -111,6 +111,7 @@
                opacity: 0.9;
                font-weight: bold;
                font-size: 18px;
+               cursor: pointer;
           }
           #home_menu{
                color: white;
@@ -118,6 +119,7 @@
                float: left;
                margin-left: 8%;
                font-weight: bold;
+               cursor: pointer;
           }
           #home_menu2{
                color: white;
@@ -125,6 +127,7 @@
                margin-left: 8%;
                opacity: 0;
                color: white;
+               user-select: none;
                
           }
           
@@ -134,25 +137,33 @@
                color: white; 
                font-weight: bold;
                font-size: 17px;
+               cursor: pointer;
+          }
+          #sp{
+               background-color: aliceblue;
+               color: black;
           }
           .mxh{
                display: inline-block;
-               position: absolute;
-               top:    90%;
+               position: fixed;
+               bottom:    15%;
                right: 3%;
                font-size: 250%;
-               color: white;
-               
-               
+               color: white;   
           }
           .search_tong{
                padding-top: 1%;
                text-align: center;
           }
-          .search{
+          input.search{
                width: 40%;
                height: 40px;
                border-radius: 25px;
+               opacity: 0.87;
+               padding-left: 20px;
+               border: none;
+               opacity: 0.8;
+               font-weight: bold;
           }
           .search_icon{
                display: inline;
@@ -163,11 +174,16 @@
                cursor: pointer;
                padding-top: 10px;
           }
-
-          @media only screen and (-width: 800px){
-               
+          .Main{
+               color: white;
           }
-          @media only screen and (max-width:  800px) {
+
+          @media only screen and (max-width: 428px){
+               .text_coffee{
+                    font-size: 17px;
+               }
+          }
+          @media only screen and (max-width:  836px) {
                #home_menu, #home_Hien, .text_menu{
                     display: none;
                }
@@ -180,34 +196,37 @@
                     font-size: 2.2em;
                     position: absolute;
                     top: 1em;right: 2%;
-
                }
+
                .search_tong{
+                    display: inline-block;
                     position: relative;
-                    top: -10px;
+                    top: -280%;
+                    height: 10%;
+                    width: 90%;
+                    margin-left: 7%;
                }
-               .search,.search_icon{
-                    height: 30px;
+               #home_menu2:hover{
+                    color: brown;
+                    cursor: pointer;
                }
-
-        
                #mobile_menu{
                     display: block;
                }
                
           }
-          #home_menu2:hover,#home_menu:hover,#sanpham:hover,.text_menu:hover{
+          #home_menu:hover,#sanpham:hover,.text_menu:hover{
                color: rgb(196, 64, 64);
                opacity: 1.0;
           }
-          #logo_user:hover{
+          #logo_user:hover,.search_icon:hover{
                cursor: pointer;
                opacity: 0.8;
                color: white;
 
           }
           
-         
+             
           
           
           
@@ -216,7 +235,7 @@
 <body>
 <!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
      <div class="hed">
-          <div class="logo"><img src="logo.jpg" alt=""></div>
+          <div class="logo"><img src="img/logo.jpg" alt=""></div>
           <div class="text_coffee">
                <h1 >Coffee Place</h1>
                <p>Vì sức khỏe vì tương lai</p>
@@ -245,7 +264,9 @@
           <div class="text_menu">
                     <div class="text_menu">
                          <select name="sanpham" id="sanpham">
-                              <option value="all">Sản phẩm</option>
+                              <option value="all" id="sp">Sản phẩm</option>
+                              <option value="all" id="sp">Sản phẩm</option>
+                              <option value="all" id="sp">Sản phẩm</option>
                          </select></div>
                          <div id="thongtin" class="text_menu">Thông tin</div>
                          <div id="thucdon" class="text_menu">Thực đơn</div>
@@ -253,13 +274,92 @@
                          <div id="lienHe" class="text_menu">Liên hệ</div>
           </div>
           <div class="mxh">
-               <i class="fab fa-facebook-messenger"></i>
-               <i class="fab fa-facebook-square"></i>
+               <div><i class="fab fa-facebook-messenger"></i></div>
+               <div><i class="fab fa-facebook-square"></i></div>
+               
           </div>
           <!-- search  tim  kien hang -->
           <div class="search_tong">
-               <input type="search" class="search">
+               <input type="search" class="search" placeholder="Tìm kiếm tại đây ">
                <i class="search_icon fas fa-search"></i>
+          </div>
+     </div>
+     <div class="Main">
+          <div class="text_main">
+               <ul class="text_sp">
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+                    <li>Tất cả sản phẩm</li>
+               </ul>
           </div>
      </div>
 </body>

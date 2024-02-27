@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    :root {
+      --menu-color: rgba(0, 0, 0, 0.755);
+      --hed-color: white;
+    }
+    .hed {
+      border: 1px solid rgba(40, 24, 24, 0.332);
+      background-image: url(bg.jpg);
+      background-color: rgba(40, 24, 24, 0.332);
+      width: auto;
+      height: 5em;
+      opacity: 0.855;
+    }
+    img {
+      float: left;
+      height: 90%;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: transparent;
+      width: 4.5em;
+      height: 4.5em;
+      border: 1px solid black;
+      border-radius: 200%;
+      margin-top: 0.2em;
+      margin-left: 5%;
+      opacity: 1.0;
+    }
+    h1 {
+      color: rgba(255, 255, 255, 0.937);
+      text-align: center;
+    }
+    p {
+      color: white;
+      text-align: center;
+    }
+    #logo_user.material-symbols-outlined {
+      display: inline-block;
+      font-size: 3em;
+      line-height: normal;
+      vertical-align: -6%;
+      cursor: pointer;
+      position: absolute;
+      top: 0.6em;
+      right: 2%;
+    }
+    .menu {
+      display: block;
+      background-color: var(--menu-color);
+      width: 100%;
+      height: 2em;
+      padding: 0.5em;
+    }
+    /* New element for mobile menu button */
+    #mobile_menu {
+      display: none;
+      color: aliceblue;
+      font-size: 2em;
+      cursor: pointer;
+      position: absolute;
+      top: 0.7em;
+      right: 5%;
+    }
+
+    @media only screen and (max-width: 768px) {
+      #home_menu, #home_Hien, .text_menu {
+        display: none;
+      }
+      #mobile_menu {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+     <!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
+     <div class="hed">
+          <div class="logo"><img src="logo.jpg" alt=""></div>
+          <h1>Coffee Place</h1>
+          <p>Vì sức khỏe vì tương lai</p>
+          <span id="logo_user" class="material-symbols-outlined">
+               account_circle
+               </span>
+     </div>
+<!--  Phan nay  la menu -->
+     <div class="menu">
+          <div id="home_Hien">
+               <div class="menu_tyle">
+               <div id="home_menu"><span class="material-symbols-outlined">
+                    home
+                    </span>
+               </div>   
+          </div>
+          <div class="text_menu">
+                    <div class="text_menu">
+                         <select name="sanpham" id="sanpham">
+                              <option value="all">San pham</option>
+                         </select></div>
+                         <div id="thongtin" class="text_menu">Thông tin</div>
+                    <div id="thucdon" class="text_menu">Thực đơn</div>
+                    <div id="tintuc" class="text_menu">Tin tức</div>
+                    <div id="lienHe" class="text_menu">Liên hệ</div>
+               </div>
+          </div>
+          <div id="home_An">
+               <span id="home_An" class="material-symbols-outlined">
+                    menu
+                    </span>
+          </div></div>
+  <!-- Your HTML content goes here -->
+</body>
+</html>

@@ -1,107 +1,163 @@
-/*  phan  body///////////////////////////////////////////////// */
-body{
+*{
      box-sizing: border-box;
-     padding: 0; margin:  0;
-     background-color: white;
+     padding: 0;
+     margin: 0;
 }
-/*  phan  top dau///////////////////////////////////////////////// */
-.top{
-     background-color: rgba(0, 0, 0, 0.412);
-     height:  70px;
-     width: 100%;
-     display: flex;
-     position: static;
+:root{
+     --menu-color: rgba(0, 0, 0, 0.755);
+     --hed-color:white;
+}
+body{
+     background-image: url('img/back_ground_main.jpg');
+     box-sizing: border-box;
+     background-repeat: no-repeat;
+     background-size: cover;
      
-}
-.logo{
-     padding-left: 40%;
-     height: 70px;
-     width: auto;
-     position: relative;
 
 }
-.div_search{
-     display:  flex;
-     margin: 0 auto;
-     margin-top: 1.5em;
-     position: relative;
-}
-#inp_search{
-     height: 2em;
-     width: 10rem;
-     border: 1px solid rgba(0, 0, 0, 0.536);
-     border-radius: 4px;
-     box-shadow: inset  0 0 8px #9e9e9e;
-     position: static;
-}
-span#btn_search_material{
-     color: black;
-     position:relative;
-}
-button#btn_search{
-     height: 2em;
-     width: auto;
-     border: 1px solid rgba(0, 0, 0, 0.536);
-     border-radius: 4px;
-     position: relative;
-}
-a{
-     text-decoration: none;
-     /* color: rgba(0, 0, 0, 0.858); */
-     color: rgba(165, 42, 42, 0.903);
-}
-i{
-     font-weight: 20px;
-}
-.login_res{
-     margin-right: 1%;
-     margin-top: 0.5em;
-     /* float: left; */
+/* phan nay  la  header==>  tong cua hed+menu
+ .header{ 
+     
+} */
+.hed{
+     border: 0.1px solid rgba(40, 24, 24, 0.332);
+     background-image: url(img/bg1.jpg);
+     object-position: right ;
+     width: auto;height: 5em;
+     opacity:  0.855;
      text-align: center;
-     position: static;
-     top: -7px;
-     right: 0;
-     /* color: red; */
-     
+     margin: 0;
+     padding: 0;
+
 }
-#person.material-symbols-outlined{
-     font-size: 19px;
-     border: 1px solid white;
-     background-color: rgba(255, 228, 196, 0.547);
-     border-radius: 4px;
-}
-span.material-symbols-outlined{
+img.logo_{
+     float: left;
+     height: 90%;
+     display: inline-block;
      vertical-align: middle;
-     line-height: normal;
-}
-.right{
-     display: inline-block;
-     padding-top: 0.5em;
-     
-}
-/*  den phan meneu //////////////////////////////////////////////////////////////// */
-.nav{
-     display: flex;
-     border: 2px solid black;
-     box-shadow: 0 0 10px #ccc;
-     width: 100%;height: 30px;
-     background-color: rgba(0, 0, 0, 0.711);
-     /* background-color: rgba(255, 255, 255, 0.207) */
-}
-.nav_padding{
-     display: inline-block;
-     margin-left: 12%;
-     margin-top: 0.7%;
+     background-color: url('img/bg1.jpg');
+     width: 4.5em;height: 4.5em;
+     color: aliceblue;
      border: 1px solid black;
-     overflow: hidden;
-     text-align: center;
-     border-radius: 4px;
-     color: brown;
-     background-color: antiquewhite;
-     height: 70%;
-     /* float: left; */
-     cursor: pointer;
-     vertical-align: middle;
-     line-height: normal;
+     border-radius:   200%;
+     display: inline-block;
+     position: absolute;
+     top: 0.2em;left: 5%;
+     opacity: 1.0;
 
+}
+.text_coffee{
+     text-align: center;
+     line-height: normal;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 16pt;
+     color: white;
+     user-select: none;
+}
+
+#logo_user.material-symbols-outlined{
+     display: inline-block;
+     font-size: 3em;
+     line-height: normal;
+     vertical-align: -6%;
+     color: aliceblue; 
+     cursor: pointer;
+     position: absolute;
+     top: 0.6em;right: 2%;
+     opacity: 1.0;
+     box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+
+
+}
+.tung{
+     margin-top: 3%;
+     margin-bottom: 7%;
+     padding-left: 8%;
+     padding-right: 8% ;
+     box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+     height: 2em;
+     font-size: large;
+     border-radius:  10%;
+     background-color: var(--hed-color);
+}
+.menu_tyle{
+     position: static;
+     left: 20%;
+     
+}
+.text_menu{
+     
+     display: flex;
+     margin-left: 10%;
+     color: aliceblue;
+     opacity: 0.9;
+     font-weight: bold;
+     font-size: 18px;
+     cursor: pointer;
+}
+#home_menu{
+     color: white;
+     opacity:  0.8;
+     float: left;
+     margin-left: 8%;
+     font-weight: bold;
+     cursor: pointer;
+}
+#home_menu2{
+     color: white;
+     float: left;
+     margin-left: 8%;
+     opacity: 0;
+     color: white;
+     user-select: none;
+     
+}
+
+#sanpham{
+     border: 0;
+     background-color: rgba(0, 0, 0, 0);
+     color: white; 
+     font-weight: bold;
+     font-size: 17px;
+     cursor: pointer;
+}
+#sp{
+     background-color: aliceblue;
+     color: black;
+}
+.mxh{
+     display: inline-block;
+     position: fixed;
+     bottom:    15%;
+     right: 3%;
+     font-size: 250%;
+     color: white;   
+}
+.search_tong{
+     padding-top: 1%;
+     text-align: center;
+}
+input.search{
+     width: 40%;
+     height: 40px;
+     border-radius: 25px;
+     opacity: 0.87;
+     padding-left: 20px;
+     padding-right: 20px;
+     border: none;
+     opacity: 0.8;
+     font-weight: bold;
+}
+.search_icon{
+     display: inline;
+     position: relative;
+     top: 7px;
+     color: aliceblue;
+     font-size:  25px;
+     cursor: pointer;
+     padding-top: 10px;
+}
+.marquee{
+     color: white;
+     margin-top: 0px;
 }

@@ -19,13 +19,16 @@
                --hed-color:white;
           }
           body{
+               padding: 0;margin: 0;
+               width: 100%;height: 100%;
                background-image: url('img/back_ground_main.jpg');
                box-sizing: border-box;
                background-repeat: no-repeat;
                background-size: cover;
-               
-
+               background-position: center;
+               background-attachment: fixed;
           }
+          
           /* phan nay  la  header==>  tong cua hed+menu
            .header{ 
                
@@ -46,6 +49,7 @@
                text-align: center;
                margin: 0;
                padding: 0;
+               z-index: 9999;
 
           }
           img.logo_{
@@ -107,11 +111,13 @@
              width: 100%;
              height: 2em;
              padding: 0.5em;
+             z-index:  999;
 
           }
           .menu_tyle{
                position: static;
                left: 20%;
+               z-index:  9999;
                
           }
           .text_menu{
@@ -165,6 +171,7 @@
           .search_tong{
                padding-top: 1%;
                text-align: center;
+               font-weight: bold;
           }
           input.search{
                width: 40%;
@@ -176,6 +183,10 @@
                border: none;
                opacity: 0.8;
                font-weight: bold;
+               font-weight: bold;
+               box-shadow:inset 0px 0px 7px 4px rgb(196 181 181 / 50%);
+               color: black;
+               
           }
           .search_icon{
                display: inline;
@@ -199,7 +210,15 @@
 
           }
           h2{
+               display: inline;
                margin-top: 1%;
+               border-radius: 5px;
+               padding: 3px;
+               background-color: rgba(0, 0, 0, 0.742);
+               
+               color:red ;
+          }hr{
+               background-color:rgba(0, 0, 0, 0.742); ;
           }
           .sp{
                float: left;
@@ -208,29 +227,72 @@
           }
           /* san pham  div-sp*/
           .div-sp{
+               text-align: center;
+               position: relative;
                border: solid 2px black;
+               border: none;
                border-radius: 10px;
-               background-color: rgba(209, 162, 162, 0.503);
-               width: 307px;height:  307px;
+               padding: 3px;
+               /*background-color: rgba(209, 162, 162, 0.826);*/
+               background-color:rgba(255, 255, 255, 0.674);
+               width: 307px;height:  310px;
+               z-index: 1;
+               box-shadow:  inset 0px 0px 19px 6px rgb(70 49 49 / 50%);
           }
           /* CHINH  TAT  CA ANH  IMG SAN PHAM */
           
           img.img_sp{
+               display: block;
                text-align: center;
-               width:10px;
-               height: auto;
+               
+               width: 300px;
+               height: 250px;
+               border-radius: 10px 10px 0px 0px;
 
           }
           /* CHINH  TUNG CAI  MOT */
-          
-
-
-
-          
+          .text_sp{
+               margin-bottom: 200%;
+               padding-left: 10%;
+               font-size: 150%;
+               color: black;
+               font-weight: bold;
+               text-align: center;
+          }
+          button{
+               color: aliceblue;
+               background-color: red;
+               z-index: 2;
+               border: 1px solid white;
+               border-radius: 15px;
+               display: inline-block;
+               font-size: 14px;
+               cursor: pointer;
+               position: absolute;
+               top: 50%;
+               right: 35%;
+               padding: 10px 20px;
+               transition: background-color 0.3s;
+               opacity: 1;
+               cursor: pointer;
+               z-index: 2;
+          }
+               
+               
+               
 
           @media only screen and (max-width: 428px){
                .text_coffee{
                     font-size: 17px;
+               }
+          }
+          @media only  screen and (max-width:360px){
+               .fab{
+                    color: rgba(0, 0, 255, 0.674);
+                    font-size: 40px;
+               }
+               .text_sp{
+                    font-size: 100%;
                }
           }
           @media only screen and (max-width:  836px) {
@@ -276,6 +338,14 @@
                opacity: 0.8;
                color: white;
 
+          }
+          
+          button:hover{
+               background-color: blue;
+               opacity: 1;
+          }
+          .img_sp:hover{
+               opacity: 0.8;
           }
           
              
@@ -351,32 +421,39 @@
           </div> -->
 <!--  ALL  SAN PHAM O  DAY  :))  -->
      <div class="Main">
-          <h2>*Tat  ca cac san pham</h2>
+          <h2>*Tất cả các sản phẩm</h2><hr>
           <div class="all_sp">
                <div id="sp1" class="sp div-sp">
-                    <img class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <div class="text_sp1">San Pham 1:  nguyen thanh tung</div>
+                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
+                    <button>Xem them</button>
+                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
-               <div id="sp2" class="sp div-sp">
-                    <!-- <img src="https://batos.vn/images/upload/images/ca-phe-g7-4.jpg" alt="" class="img_sp2 img_sp"> -->
-                    <div class="text_sp2">San Pham 2:</div>
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
+                    <button>Xem them</button>
+                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
-               <div id="sp3" class="sp div-sp">
-                    <!-- <img src="https://chefjob.vn/wp-content/uploads/2017/12/thuc-uong-epresso-la-gi.jpg" alt="" class="img_sp3 img_sp"> -->
-                    <div class="text_sp3">San Pham 3:</div>
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
+                    <button>Xem them</button>
+                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
-               <div id="sp3" class="sp div-sp">
-                    <!-- <img src="https://chefjob.vn/wp-content/uploads/2017/12/thuc-uong-epresso-la-gi.jpg" alt="" class="img_sp3 img_sp"> -->
-                    <div class="text_sp3">San Pham 3:</div>
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
+                    <button>Xem them</button>
+                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
-               <div id="sp3" class="sp div-sp">
-                    <!-- <img src="https://chefjob.vn/wp-content/uploads/2017/12/thuc-uong-epresso-la-gi.jpg" alt="" class="img_sp3 img_sp"> -->
-                    <div class="text_sp3">San Pham 3:</div>
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
+                    <button>Xem them</button>
+                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
-               <div id="sp3" class="sp div-sp">
-                    <!-- <img src="https://chefjob.vn/wp-content/uploads/2017/12/thuc-uong-epresso-la-gi.jpg" alt="" class="img_sp3 img_sp"> -->
-                    <div class="text_sp3">San Pham 3:</div>
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
+                    <button>Xem them</button>
+                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
+               
           </div>
      </div>
      <div class="Bottom">
@@ -408,7 +485,7 @@
                   menu.style.top = '0';
                   menu1.style.display='none';
                } else {
-                    menu.style.top='-10px'
+                    menu.style.top='-3px'
                     menu.style.position = 'relative';
               }
           });

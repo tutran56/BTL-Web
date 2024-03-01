@@ -21,12 +21,17 @@
                --hed-color:white;
           }
           body{
-               background-image: url('img/bg.jpg');
+               background-image: url('img/back_ground_main.jpg');
                box-sizing: border-box;
-               background-repeat: repeat;
+               background-repeat: no-repeat;
+               background-size: cover;
                
 
           }
+          /* phan nay  la  header==>  tong cua hed+menu
+           .header{ 
+               
+          } */
           .hed{
                border: 0.1px solid rgba(40, 24, 24, 0.332);
                background-image: url(img/bg1.jpg);
@@ -38,7 +43,7 @@
                padding: 0;
 
           }
-          img{
+          img.logo_{
                float: left;
                height: 90%;
                display: inline-block;
@@ -92,6 +97,7 @@
 
           .menu{
              display: block;
+             position: fixed;
              background-color: black;
              width: 100%;
              height: 2em;
@@ -161,6 +167,7 @@
                border-radius: 25px;
                opacity: 0.87;
                padding-left: 20px;
+               padding-right: 20px;
                border: none;
                opacity: 0.8;
                font-weight: bold;
@@ -174,9 +181,36 @@
                cursor: pointer;
                padding-top: 10px;
           }
-          .Main{
+          .marquee{
                color: white;
+               margin-top: 0px;
           }
+          .Main{
+               margin-top: 10%;
+               color: white;
+               width: 100%;
+               display: block;
+               display: inline-block;
+
+          }
+          .sp{
+               float: left;
+               margin-left: 10%;
+          }
+          img.img_sp{
+               width:300px;
+               background-size: cover;
+               height: 300px;
+          }
+          img.img_sp1{
+               height: 100px;
+          }
+
+          
+
+
+
+          
 
           @media only screen and (max-width: 428px){
                .text_coffee{
@@ -197,7 +231,9 @@
                     position: absolute;
                     top: 1em;right: 2%;
                }
-
+               .marquee{
+                    display: none;
+               }
                .search_tong{
                     display: inline-block;
                     position: relative;
@@ -212,9 +248,9 @@
                }
                #mobile_menu{
                     display: block;
-               }
-               
+               }   
           }
+          /* Hover :  html*/
           #home_menu:hover,#sanpham:hover,.text_menu:hover{
                color: rgb(196, 64, 64);
                opacity: 1.0;
@@ -234,8 +270,9 @@
 </head>
 <body>
 <!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
+<div id="header">
      <div class="hed">
-          <div class="logo"><img src="img/logo.jpg" alt=""></div>
+          <div class="logo"><img class="logo_" src="img/logo.jpg" alt=""></div>
           <div class="text_coffee">
                <h1 >Coffee Place</h1>
                <p>Vì sức khỏe vì tương lai</p>
@@ -280,87 +317,60 @@
           </div>
           <!-- search  tim  kien hang -->
           <div class="search_tong">
+               <marquee class="marquee" behavior="text_run" direction="text_run">Cafe là một loại thức uống phổ biến trên toàn thế giới, được làm từ hạt cà phê rang. Có nhiều loại Cafe khác nhau và sản phẩm cafe cũng đa dạng, từ cafe đen truyền thống đến các loại cafe đặc biệt và thức uống pha trộn</h1>
+               </marquee>
                <input type="search" class="search" placeholder="Tìm kiếm tại đây ">
                <i class="search_icon fas fa-search"></i>
+               
           </div>
      </div>
+          <!-- search  tim  kien hang -->
+          <!-- <div class="search_tong">
+               <marquee class="marquee" behavior="text_run" direction="text_run">Cafe là một loại thức uống phổ biến trên toàn thế giới, được làm từ hạt cà phê rang. Có nhiều loại Cafe khác nhau và sản phẩm cafe cũng đa dạng, từ cafe đen truyền thống đến các loại cafe đặc biệt và thức uống pha trộn</h1>
+               </marquee>
+               <input type="search" class="search" placeholder="Tìm kiếm tại đây ">
+               <i class="search_icon fas fa-search"></i>
+          </div> -->
+          
      <div class="Main">
-          <div class="text_main">
-               <ul class="text_sp">
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-                    <li>Tất cả sản phẩm</li>
-               </ul>
+          <h2>*Tat  ca cac san pham</h2>
+          <div class="all_sp">
+               <div id="sp1" class="sp">
+                    <img class="img_sp1 img_sp" src="https://file.hstatic.net/200000391645/article/cafe-bot-la-gi-cach-che-bien-cafe-bot-thom-ngon1_028a833a4b3a45a688d8502461f7b5c7.jpg" alt="">
+                    <div class="text_sp1">San Pham 1:  nguyen thanh tung</div>
+               </div>
+               <div id="sp2" class="sp">
+                    <img src="https://batos.vn/images/upload/images/ca-phe-g7-4.jpg" alt="" class="img_sp2 img_sp">
+                    <div class="text_sp2">San Pham 2:</div>
+               </div>
+               <div id="sp3" class="sp">
+                    <img src="https://chefjob.vn/wp-content/uploads/2017/12/thuc-uong-epresso-la-gi.jpg" alt="" class="img_sp3 img_sp">
+                    <div class="text_sp3">San Pham 3:</div>
+               </div>
           </div>
+
      </div>
+</div>    
+<style>
+          .menu{
+               transition:  10s;
+          }
+     </style>
+     <script>
+          // JavaScript để giữ cho phần menu luôn ở vị trí đầu tiên của trang web khi cuộn
+          window.addEventListener('scroll', function() {
+              var menu = document.querySelector('.menu');
+              var menu1 = document.querySelector('.marquee');
+              var mainContent = document.querySelector('.Main');
+      
+              if (window.pageYOffset > mainContent.offsetTop) {
+                  menu.style.position = 'fixed';
+                  menu.style.top = '0';
+                  menu1.style.display='none';
+              } else {
+                  menu.style.position = 'relative';
+              }
+          });
+      </script>
 </body>
 </html>

@@ -304,7 +304,6 @@
           /*phan tu van =*/
           .tu-van{
                margin-top: 100px;
-               
                clear: both;
                display: inline-block;
                padding-left:auto;
@@ -315,14 +314,17 @@
                background-image: url('./img/avata_dang_ky_TU_VAN.jpg');
           }
           h4{
-               margin-top: 15px;
+               display: block;
+               margin-top: 0px;
                text-align: center;
                font-size: 200%;
+               color:red;
+               background-color:black;
           }
           .dangky{
                float: left;
                padding: 5px;
-               margin: 5%;
+               margin: 3%;
                
           }
           #map{
@@ -331,7 +333,7 @@
           .textmap{
                color:aliceblue;
                font-size: 100%;
-               padding-bottom: 15px;
+               padding-bottom: 10px;
 
           }
           .textmap_cty{
@@ -367,12 +369,11 @@
           .footer{
                margin-top: 100px;
                border: 1px solid black;
-               height: 300px;width: 100%;
-               background-color: black;
+               height: auto;width: 100%;
+               background-color: rgba(0, 0, 0, 0.734);
                color: white;
                
           }
-          
           .logo-vs-text{
                margin-top: 5%;
                margin-left: 3%;
@@ -384,14 +385,62 @@
                background-image: url('./img/logo.jpg');
                width: 100px;height: auto;
                background-size: 200%;
-
+               
           }
           .h2_footer{
                color: white;
                clear: both;
                
           }
+          .DoiTac{
+               margin-top:5%;
+               margin-left:9%;
+          }
+          .chung{
+               float:left;
+          }
+          #text-doiTac{
+               text-align: center;
+               color:yellow;
+               padding:10px;
                
+          }
+          .col,.col1,.col2{
+               column-count:2;
+          }
+
+          .Pay{
+               margin-top:5%;
+               margin-left:9%;
+               
+          }
+          .link-pay{
+               color:aqua;
+          }
+          .item_pay{
+               font-size: 35px;
+          }
+          .item-mxh{
+               text-decoration: none;
+               color: aliceblue;
+               font-weight: bold;
+               font-size: 20px;
+               margin-top: 20px;
+               
+          }
+          #text-mxh{
+               padding: 20px;
+               color: yellow;
+          }
+          .copy{
+               font-size: 15px;
+               clear: both;
+               text-align: center;
+               position: relative;
+               bottom: 0px;
+          }
+          
+          
           
 
           @media only screen and (max-width: 428px){
@@ -474,6 +523,7 @@
                background-color: orange;
                color: white;
           }
+          
           
           
           
@@ -565,11 +615,6 @@
                     <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
                <div id="sp1" class="sp div-sp">
-                    <img  class="img_sp1 img_sp" src="./img/san_pham3_cocoffeRangXay.jpg" alt="">
-                    <button><a class="blog_link" href="coffee_bot.html">Xem Thêm</a> </button>
-                    <div class="text_sp">Coffee Bột</div>
-               </div>
-               <div id="sp1" class="sp div-sp">
                     <img  class="img_sp1 img_sp" src="./img/san_pham2_coffee_hoaTan.jpg" alt="">
                     <button><a class="blog_link" href="coffee_hoa_tan.html">Xem Thêm</a> </button>
                     <div class="text_sp">Coffee Hòa Tan G7 Gold Rumi</div>
@@ -600,7 +645,7 @@
                </div>
           </div>
           <div class="tu-van">
-               <h4>Dang ky tu  van</h4>
+               <h4>Đăng Ký Tư Vấn</h4>
                <div id="map" class="dangky">
                     <p class="textmap textmap_cty">Công ty cổ phần coffee DNU</p>
                     <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
@@ -623,10 +668,53 @@
 </div>
 <div class="footer">
      <hr>
-     <div class="chung logo-vs-text">
-          <div class="logoFooter"><img src="./img/logo.jpg" alt="logo.img"id="logo_footer"></div>
-          <div><h2 class="h2_footer">Coffee Place</h2></div>
+     <div class="logo-vs-text">
+          <div class="logoFooter">
+               <img src="./img/logo.jpg" alt="logo.img"id="logo_footer">
+          </div>
+          <div><h2 class="h2_footer">Coffee Place</h2>
+               <p class="textmap textmap_cty">Công ty cổ phần coffee DNU</p>
+               <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+               <p class="textmap">Điện Thoại: (024)335577799</p>
+               <p class="textmap">Email: dnu@dainam.edu.vn</p>
+          </div>
      </div>
+     <div class="DoiTac chung">
+          <p id="text-doiTac">Đối Tác Chúng Tôi</p>
+          <div class="col">
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-01.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-02.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-03.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-04.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-05.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-06.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-07.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-08.jpg"></div>
+          </div>
+     </div>
+     <div class="Pay chung">
+          <p id="text-doiTac">Đối Tác Thanh Toán</p>
+          <div class="col1">
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-visa.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-master.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-jcb.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-atm.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-cod.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/alepay.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/payoo.png"></div>
+          </div>
+           <a class="link-pay" href="thanhtoan.html">Cách thức thanh toán</a> 
+     </div>
+     <div class="all-mxh chung Pay">
+          <p id="text-doiTac">Các Trang Mạng Xã Hội</p>
+          <div class="col2">
+               <div class="item_mxh"><a class="item-mxh" href="https://facebook.com">Facebook</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://youtube.com">Youtube</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://tiktok.com">TikTok</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://zalo.com">Zalo</a></div>
+          </div>
+     </div>
+     <p class="copy">© 2024 ThanhTung-TranTu</p>
 </div>    
 <style>
      /* phan style ben duoi  nay  la phan danh  cho  js  de chinh sua cho  phu  hop*/

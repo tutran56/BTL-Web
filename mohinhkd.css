@@ -50,8 +50,8 @@ h2 {
 
 .center img {
   margin: 0 auto;
-  width: 500px;
-  height: 300px;
+  width: 50%;
+  height: auto;
 }
 
 a {

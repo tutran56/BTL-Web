@@ -155,18 +155,8 @@
                padding-top: 10px ;
           }
           /* Hiển thị các thẻ <li> khi người dùng trỏ chuột vào <ul> */
-          #San:hover .hidden {
-               color: white;
-               border-radius: 5px;
-               display: block;
-               position:relative;
-               z-index: 1;
-               width: auto;
-               height: auto;
-               text-decoration: none;
-          }
-          #link{
-               background-color: rgba(153, 73, 73, 0.5);
+               #link{
+                    background-color: rgba(153, 73, 73, 0.5);
                
           }
  
@@ -307,9 +297,82 @@
                cursor: pointer;
                z-index: 2;
           }
+          .blog_link{
+               text-decoration: none;
+               color: white;
+          }
+          /*phan tu van =*/
+          .tu-van{
+               margin-top: 100px;
                
+               clear: both;
+               display: inline-block;
+               padding-left:auto;
+               padding-right: auto;
+               width: 100%;height:auto;
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-image: url('./img/avata_dang_ky_TU_VAN.jpg');
+          }
+          h4{
+               margin-top: 15px;
+               text-align: center;
+               font-size: 200%;
+          }
+          .dangky{
+               float: left;
+               padding: 5px;
+               margin: 5%;
                
+          }
+          #map{
+               margin-left: 15%;
+          }
+          .textmap{
+               color:aliceblue;
+               font-size: 100%;
+               padding-bottom: 15px;
+
+          }
+          .textmap_cty{
+               font-size: 150%;
+               font-weight: bold;
+          }
+          .tuvan_input{
+               font-size: 20px;
+               padding: 10px;
+               border-radius: 10px;
+               margin-bottom: 40px;
+               margin-left: 15%;
+               width:110%;
+               padding-left: 20px;
+
+
+          }
+          .text_tuvan_input{
+               margin-left: 15%;
+               color:aliceblue;
+               font-size: 20px;
+               font-weight: bold;
+               background-color: brown;
+          }
+          
+          .submit{
+               font-weight: bold;
+               cursor: pointer;
+          }
+
+          /*phan cuoi cua web Home*/
+
+          .footer{
+               margin-top: 100px;
+               border: 1px solid black;
+               height: auto;width: 100%;
+               background-color: black;
+               color: white;
+          }
                
+          
 
           @media only screen and (max-width: 428px){
                .text_coffee{
@@ -367,7 +430,7 @@
                cursor: pointer;
                opacity: 0.8;
                color: white;
-
+               
           }
           
           button:hover{
@@ -377,15 +440,29 @@
           .img_sp:hover{
                opacity: 0.8;
           }
+          #San:hover .hidden {
+               color: white;
+               border-radius: 5px;
+               display: block;
+               position:relative;
+               z-index: 1;
+               width: auto;
+               height: auto;
+               text-decoration: none;
+          }
+          .submit:hover{
+               background-color: orange;
+               color: white;
+          }
           
-             
+          
           
           
           
      </style>
 </head>
 <body>
-<!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
+     <!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
 <div id="header">
      <div class="contai-all_menu">
           <div class="hed">
@@ -427,6 +504,7 @@
                               </select> -->
                               <ul id="San">Sản Phẩm
                                    <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_hat.html">Coffee Hạt</a></li>
+                                   <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_bot.html">Coffee Bột</a></li>
                                    <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_hoa_tan.html">Coffee Hòa Tan</a></li>
                                    <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_rang_xay.html">Coffee Rang Xay</a></li>
                                </ul>   
@@ -464,17 +542,22 @@
           <div class="all_sp">
                <div id="sp1" class="sp div-sp">
                     <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
+                    <button><a class="blog_link" href="coffee_hat.html">Xem Thêm</a> </button>
                     <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
                <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham3_cocoffeRangXay.jpg" alt="">
+                    <button><a class="blog_link" href="coffee_bot.html">Xem Thêm</a> </button>
+                    <div class="text_sp">Coffee Bột</div>
+               </div>
+               <div id="sp1" class="sp div-sp">
                     <img  class="img_sp1 img_sp" src="./img/san_pham2_coffee_hoaTan.jpg" alt="">
-                    <button>Xem them</button>
+                    <button><a class="blog_link" href="coffee_hoa_tan.html">Xem Thêm</a> </button>
                     <div class="text_sp">Coffee Hòa Tan G7 Gold Rumi</div>
                </div>
                <div id="sp1" class="sp div-sp">
                     <img  class="img_sp1 img_sp" src="./img/san_pham3_cocoffeRangXay.jpg" alt="">
-                    <button>Xem them</button>
+                    <button><a class="blog_link" href="coffee_rang_xay.html">Xem Thêm</a> </button>
                     <div class="text_sp">Coffee Rang Xay Sáng Tạo</div>
                </div>
                
@@ -482,25 +565,46 @@
           <div class="all_blog">
                <h3>Các thông tin khác:</h3><hr class="loai">
                <div id="blog" class="sp div-sp">
-                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
-                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_kinhdoand_cofffee_book.jpg" alt="">
+                    <button><a class="blog_link" href="mohinhkd.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Kinh Nghiệm Mở Cafe Sách</div>
                </div>
                <div id="blog" class="sp div-sp">
-                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
-                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_top10_city_cafe.jpeg" alt="">
+                    <button><a class="blog_link" href="caphecity.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Top10 Thành Phố Nổi Tiếng Nhất Thế Giới</div>
                </div>
                <div id="blog" class="sp div-sp">
-                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
-                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_cafe_hien_nay.jpeg" alt="">
+                    <button><a class="blog_link" href="thuctrangcafe.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Cafe hiện nay như thế nào</div>
                </div>
           </div>
+          <div class="tu-van">
+               <h4>Dang ky tu  van</h4>
+               <div id="map" class="dangky">
+                    <p class="textmap textmap_cty">Công ty cổ phần coffee DNU</p>
+                    <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+                    <p class="textmap">Điện Thoại: (024)335577799</p>
+                    <p class="textmap">Email: dnu@dainam.edu.vn</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.12060794678!2d105.75778851501447!3d20.947671158583873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452eaa9c461c3%3A0x2a3e1c421f299adc!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyDEkOG6oWkgTmFt!5e0!3m2!1svi!2s!4v1709450701964!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+               <div id="TuVan" class="dangky">
+                    <div><input class="tuvan_input" type="text" placeholder="Họ Và Tên(*)"></div>
+                    <div><input class="tuvan_input" type="tel" placeholder="Số Điện Thoại(*)"></div>
+                    <div><input class="tuvan_input" type="email" placeholder="Email(*)"></div>
+                    <div><label class="text_tuvan_input" for="TuVan">Ngày Tháng Năm Sinh:</label>
+                         <input class="tuvan_input" type="date" placeholder="Email(*)" value="ngay/ thang/nam">
+                    </div>
+                    <div><input class="tuvan_input submit" type="submit" value="Gui"></div>
+               </div>
+          </div>
+               
      </div>
-     <hr>
-     <div class="Bottom">
-          BOTTOM
+</div>
+     <div class="footer">
+          <hr>
+          Footer
      </div>
 </div>    
 <style>

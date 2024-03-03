@@ -155,18 +155,8 @@
                padding-top: 10px ;
           }
           /* Hiển thị các thẻ <li> khi người dùng trỏ chuột vào <ul> */
-          #San:hover .hidden {
-               color: white;
-               border-radius: 5px;
-               display: block;
-               position:relative;
-               z-index: 1;
-               width: auto;
-               height: auto;
-               text-decoration: none;
-          }
-          #link{
-               background-color: rgba(153, 73, 73, 0.5);
+               #link{
+                    background-color: rgba(153, 73, 73, 0.5);
                
           }
  
@@ -307,9 +297,12 @@
                cursor: pointer;
                z-index: 2;
           }
+          .blog_link{
+               text-decoration: none;
+               color: white;
+          }
                
-               
-               
+          
 
           @media only screen and (max-width: 428px){
                .text_coffee{
@@ -367,7 +360,7 @@
                cursor: pointer;
                opacity: 0.8;
                color: white;
-
+               
           }
           
           button:hover{
@@ -377,15 +370,25 @@
           .img_sp:hover{
                opacity: 0.8;
           }
+          #San:hover .hidden {
+               color: white;
+               border-radius: 5px;
+               display: block;
+               position:relative;
+               z-index: 1;
+               width: auto;
+               height: auto;
+               text-decoration: none;
+          }
           
-             
+          
           
           
           
      </style>
 </head>
 <body>
-<!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
+     <!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
 <div id="header">
      <div class="contai-all_menu">
           <div class="hed">
@@ -427,6 +430,7 @@
                               </select> -->
                               <ul id="San">Sản Phẩm
                                    <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_hat.html">Coffee Hạt</a></li>
+                                   <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_bot.html">Coffee Bột</a></li>
                                    <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_hoa_tan.html">Coffee Hòa Tan</a></li>
                                    <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_rang_xay.html">Coffee Rang Xay</a></li>
                                </ul>   
@@ -464,17 +468,22 @@
           <div class="all_sp">
                <div id="sp1" class="sp div-sp">
                     <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
+                    <button><a class="blog_link" href="coffee_hat.html">Xem Thêm</a> </button>
                     <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
                </div>
                <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham3_cocoffeRangXay.jpg" alt="">
+                    <button><a class="blog_link" href="coffee_bot.html">Xem Thêm</a> </button>
+                    <div class="text_sp">Coffee Bột</div>
+               </div>
+               <div id="sp1" class="sp div-sp">
                     <img  class="img_sp1 img_sp" src="./img/san_pham2_coffee_hoaTan.jpg" alt="">
-                    <button>Xem them</button>
+                    <button><a class="blog_link" href="coffee_hoa_tan.html">Xem Thêm</a> </button>
                     <div class="text_sp">Coffee Hòa Tan G7 Gold Rumi</div>
                </div>
                <div id="sp1" class="sp div-sp">
                     <img  class="img_sp1 img_sp" src="./img/san_pham3_cocoffeRangXay.jpg" alt="">
-                    <button>Xem them</button>
+                    <button><a class="blog_link" href="coffee_rang_xay.html">Xem Thêm</a> </button>
                     <div class="text_sp">Coffee Rang Xay Sáng Tạo</div>
                </div>
                
@@ -482,19 +491,19 @@
           <div class="all_blog">
                <h3>Các thông tin khác:</h3><hr class="loai">
                <div id="blog" class="sp div-sp">
-                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
-                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_kinhdoand_cofffee_book.jpg" alt="">
+                    <button><a class="blog_link" href="mohinhkd.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Kinh Nghiệm Mở Cafe Sách</div>
                </div>
                <div id="blog" class="sp div-sp">
-                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
-                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_top10_city_cafe.jpeg" alt="">
+                    <button><a class="blog_link" href="caphecity.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Top10 Thành Phố Nổi Tiếng Nhất Thế Giới</div>
                </div>
                <div id="blog" class="sp div-sp">
-                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
-                    <button>Xem them</button>
-                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_cafe_hien_nay.jpeg" alt="">
+                    <button><a class="blog_link" href="thuctrangcafe.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Cafe hiện nay như thế nào</div>
                </div>
           </div>
      </div>

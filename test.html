@@ -1,49 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Background Blur and Centered Image</title>
-<style>
-    /* CSS cho body */
-    body {
-        background-image: url('img/back_ground_main.jpg');
-        box-sizing: border-box;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative; /* Đặt vị trí tương đối cho body */
-    }
-
-    /* CSS cho background blur */
-    .background-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Màu sắc background overlay */
-        backdrop-filter: blur(5px); /* Độ mờ của background */
-    }
-
-    /* CSS cho ảnh chính giữa */
-    .centered-image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1; /* Đảm bảo ảnh nằm phía trên background blur */
-    }
-</style>
-</head>
-<body>
-<!-- Background overlay -->
-<div class="background-overlay"></div>
-<p>dfdv</p>
-<!-- Ảnh chính giữa -->
-<img class="centered-image" src="img/centered_image.jpg" alt="Centered Image">
-<p>knjfbfb</p>bdfb
-<div class="tung">
-    <p>fbfd</p>
+<div class="Product">
+    <p class="text-Product">Product</p>
+    <div class="span" data-product="Product 1"></div>
+    <div class="span" data-product="Product 2"></div>
+    <div class="span" data-product="Product 3"></div>
+    <div class="span" data-product="Product 4"></div>
 </div>
-</body>
-</html>
+<style>
+    .Product {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .text-Product {
+        text-align: center;
+        margin-top: -10px;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 30px;
+        background-color: black;
+        color: white;
+        width: 100%;
+    }
+    
+    .span {
+        position: relative; /* Đặt vị trí của .span là tương đối để sử dụng pseudo-element */
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 250px;
+        height: 300px;
+        background-color: aliceblue;
+        border: 1px solid white;
+        flex: 0 0 auto;
+    }
+    
+    .span::before {
+        content: attr(data-product); /* Lấy dữ liệu từ thuộc tính data-product */
+        position: absolute;
+        top: 50%; /* Đưa ra giữa theo chiều dọc */
+        left: 50%; /* Đưa ra giữa theo chiều ngang */
+        transform: translate(-50%, -50%); /* Dịch chuyển vị trí 50% theo cả hai chiều */
+        opacity: 0; /* Mặc định ẩn đi */
+        transition: opacity 0.3s ease; /* Hiệu ứng khi xuất hiện */
+    }
+    
+    .span:hover::before {
+        opacity: 1; /* Hiển thị pseudo-element khi hover */
+    }
+    
+</style>

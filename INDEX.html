@@ -252,6 +252,7 @@
           .link_mxh{
                text-decoration: none;
                color: white;
+               z-index: 99;
           }
           .fab{
                cursor: pointer;
@@ -438,7 +439,7 @@
                margin-top: 100px;
                border: 1px solid black;
                height: auto;width: 100%;
-               background-color: rgba(0, 0, 0, 0.734);
+               background-color: rgb(0, 0, 0);
                color: white;
                
           }
@@ -731,14 +732,28 @@ li.Menu {
  .ShopNow:hover {
      color: white;
  }
- .Product ,.Menu-Product ,.Blog-Product{
+ .Product ,.Blog-Product,.bor-Blog-Product{
      width: 100%;
      height: auto; 
      display: flex; 
      flex-wrap: wrap; /* Cho phép các phần tử con tràn qua hàng mới khi cần */
      justify-content: center; /* Căn chỉnh các phần tử con theo chiều ngang */
  }
- 
+ .Menu-Product,.bor-Menu-Product{
+     width: 100%;
+     height: auto; 
+     display: flex; 
+     flex-wrap: wrap; /* Cho phép các phần tử con tràn qua hàng mới khi cần */
+     justify-content: center; /* Căn chỉnh các phần tử con theo chiều ngang */
+}
+ .bor-Menu-Product{
+     
+     border: 5px solid black;
+     display: flex ;
+
+     width: 99.9%;height: auto ;
+     padding-bottom: 5%;
+ }
  .text-Product {
      text-decoration: none;
      text-align: center;
@@ -842,11 +857,18 @@ li.Menu {
      font-size: 25px;
      background-color: black;
      color: white;
-     width: 100%;
+     width: 99.9%;
      transition:  all 0.2s linear;
+     border-radius: 100px 0px 0px;
  }
  .text-Menu-Product:hover{
      color: var(--hed-color);
+ }
+ .text-Blog-Product{
+     margin-left: 0px;
+     font-size: 25px;
+     font-weight: bold;
+     color: black;
  }
 
  .span-blog{ 
@@ -880,6 +902,78 @@ li.Menu {
      object-fit: cover;
      padding: 2px;
 }
+
+.Contacts{
+     position: relative;
+     text-align: center;
+}
+.img-Contact{
+     display: inline-block;
+     margin-top:5%;
+     width: 100%;
+     height: 550px;
+     display: inline-block;
+     z-index: 1;
+     filter: blur(0.5px);
+     object-fit:cover;
+}
+.text-p-Contacts{
+     font-size: 40px;
+}
+.text-Contacts{
+     display: inline-block;
+     position: absolute;
+     left: 28%;
+     top: 25%;
+     width:45%;
+     transform: translate(-50% -50%);
+     justify-content: center;
+     color: var(--hed-color);
+     text-align: center;
+     background-color: white;
+     padding: 10px;
+     border-radius: 5px;
+}
+.input-Contacts{
+     display: block;
+     justify-content: center;
+     padding: 12px;
+     border-radius: 10px;
+     margin-bottom: 20px;
+     width: 100%;
+
+}
+.button-Contacts{
+     width: 20%;
+     height: 50px;
+     text-align: center;
+     background-color: #be7b48;
+     border-radius: 10px;
+     transition: all 0.3s linear;
+}
+.button-Contacts:hover{
+     background-color: var(--body-color);
+     color: black;
+}
+.text-mar-Contacts{
+     display: inline-block;
+     position:  absolute; 
+     left: 5%;
+     top: 15%;
+     color: white;
+     width: 90%;
+     
+}
+#text-p-mar{
+     display: inline;
+     color: var(--hed-color);
+}
+.Footer{
+     display: inline-block;
+     width: 100%;height: auto;
+     background-color: rgba(0, 0, 0, 0.762);
+}
+
 
 
           
@@ -927,7 +1021,7 @@ li.Menu {
 <div class="Home">
      <img id="Home-img" class="Home-img" src="img/Home4.jpg" alt="img" />
      <div class="text-Home">
-          <h1>Welcome to CoffeePlace!</h3><br>
+          <h3>Welcome to CoffeePlace!</h3><br>
                <p class="text-ads">Mỗi Giọt Cà Phê, Một Bước Khởi Đầu Cho Ngày Mới!</p>
                <br><br><p>Bắt đầu ngày mới với một ly cà phê tươi!</p>
      </div>
@@ -941,21 +1035,87 @@ li.Menu {
      <div class="span"><img class="img-span" src="./img/san_pham3_cocoffeRangXay.jpg" alt=""><p class="text-buy">100.000 đ <i class="fas fa-shopping-bag bag"></i></p><p class="text-span">Xem Them</p></div>
 </div>
 <div class="Menu-Product">
-          <p class="text-Menu-Product">Menu</p>
+     <p class="text-Menu-Product">Menu</p>
+     <div class="bor-Menu-Product">
           <div class="span"><img class="img-span-Menu-Product" src="./img/menu4.webp" alt=""><p class="text-menu-product">Trà Xanh Espresso Marble</p><p class="text-buy">45.000 đ <i class="fas fa-shopping-bag bag"></i></p><p class="text-span">Xem Them</p></div>
           <div class="span"><img class="img-span-Menu-Product" src="./img/menu1.webp" alt=""><p class="text-menu-product">Coffee Đường Đen Sữa Đá</p><p class="text-buy">45.000 đ <i class="fas fa-shopping-bag bag"></i></p><p class="text-span">Xem Them</p></div>
           <div class="span"><img class="img-span-Menu-Product" src="./img/menu2.webp" alt=""><p class="text-menu-product">Coffee Sữa nóng </p><p class="text-buy">45.000 đ <i class="fas fa-shopping-bag bag"></i></p><p class="text-span">Xem Them</p></div>
           <div class="span"><img class="img-span-Menu-Product" src="./img/menu3.webp" alt=""><p class="text-menu-product">Latte Nóng</p><p class="text-buy">45.000 đ <i class="fas fa-shopping-bag bag"></i></p><p class="text-span">Xem Them</p></div>
-          
+     </div>
 </div>
 <div class="Blog-Product">
-     <p class="text-Menu-Product">Blogs</p>
+     <p class="text-Blog-Product">Blogs</p>
+     <div class="bor-Blog-Product">
           <div class="span-blog"><img class="img-span-Blog-Product" src="./img/BLOG_kinhdoand_cofffee_book.jpg " alt=""><p class="text-Blog-product">Blog:Kinh Nghiệm Mở Cafe Sách</p><p class="text-span">Xem Them</p></div>
           <div class="span-blog"><img class="img-span-Blog-Product" src="./img/BLOG_top10_city_cafe.jpeg" alt=""><p class="text-Blog-product">Blog:Top10 Thành Phố Nổi Tiếng Nhất Thế Giới</p><p class="text-span">Xem Them</p></div>
           <div class="span-blog"><img class="img-span-Blog-Product" src="./img/BLOG_cafe_hien_nay.jpeg" alt=""><p class="text-Blog-product">Blog:Cafe hiện nay như thế nào</p><p class="text-span">Xem Them</p></div>
-          
+     </div>
 </div>
-     <br><br><br><br><br>
+<div class="Contacts">
+     <img src="./img/coffee.jpeg" alt="" class="img-Contact">
+     <div class="text-mar-Contacts">
+          <marquee behavior="text-mar" direction="text-mar">Hãy để lại thông tin cho chúng tôi để nhận được tự vấn từ hệ thống <p id="text-p-mar">Cooffee Place</p> nhé!</marquee>
+     </div>
+     <div class="text-Contacts">
+          <p class="text-p-Contacts">Contacts</p>
+         <input class="input-Contacts" type="text" placeholder="Họ và Tên">
+         <input class="input-Contacts" type="text" placeholder="Số điện thoại">
+         <input class="input-Contacts value-Contacts" type="number" placeholder="Tuổi ">
+         <input class="input-Contacts" type="text" placeholder="Email:">
+        <button class="button-Contacts">< Gửi ></button>     
+     </div>
+</div><br><br><br><br>
+<div class="Footer">
+     <hr>
+     <div class="logo-vs-text">
+          <div class="logoFooter">
+               <img src="./img/logo.jpg" alt="logo.img"id="logo_footer">
+          </div>
+          <div><h2 class="h2_footer">Coffee Place</h2>
+               <p class="textmap textmap_cty">Công ty cổ phần Coffee Place</p>
+               <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+               <p class="textmap">Điện Thoại: (024)335577799</p>
+               <p class="textmap">Email: dnu@dainam.edu.vn</p>
+          </div>
+     </div>
+     <div class="DoiTac chung">
+          <p id="text-doiTac">Đối Tác Chúng Tôi</p>
+          <div class="col">
+               <div class="item_dt"><img src="img/img-logo/partner-3-01.jpeg"></div>
+               <div class="item_dt"><img src="img/img-logo/partner-3-02.jpeg"></div>
+               <div class="item_dt"><img src="img/img-logo/partner-3-03.jpeg"></div>
+               <div class="item_dt"><img src="img/img-logo/partner-3-04.jpeg"></div>
+               <div class="item_dt"><img src="img/img-logo/partner-3-05.jpeg"></div>
+               <div class="item_dt"><img src="img/img-logo/partner-3-06.jpeg"></div>
+               <div class="item_dt"><img src="img/img-logo/partner-3-07.jpeg"></div>
+               <div class="item_dt"><img src="img/img-logo/partner-3-08.jpeg"></div>
+          </div>
+     </div>
+     <div class="Pay chung">
+          <p id="text-doiTac">Đối Tác Thanh Toán</p>
+          <div class="col1">
+               <div class="item_pay"><img src="img/img-logo/logo-payment-visa.png"></div>
+               <div class="item_pay"><img src="img/img-logo/logo-payment-master.png"></div>
+               <div class="item_pay"><img src="img/img-logo/logo-payment-jcb.png"></div>
+               <div class="item_pay"><img src="img/img-logo/logo-payment-atm.png"></div>
+               <div class="item_pay"><img src="img/img-logo/logo-payment-cod.png"></div>
+               <div class="item_pay"><img src="img/img-logo/alepay.png"></div>
+               <div class="item_pay"><img src="img/img-logo/payoo.png"></div>
+          </div>
+           <a class="link-pay" href="thanhtoan.html">Cách thức thanh toán</a> 
+     </div>
+     <div class="all-mxh chung Pay">
+          <p id="text-doiTac">Các Trang Mạng Xã Hội</p>
+          <div class="col2">
+               <div class="item_mxh"><a class="item-mxh" href="https://facebook.com">Facebook</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://youtube.com">Youtube</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://tiktok.com">TikTok</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://zalo.com">Zalo</a></div>
+          </div>
+          
+     </div>
+     <div><a class="link_backup" href="#Home"><i class="back-up fas fa-chevron-circle-up"></i></a><p class="text_backup">Trở về Đầu</p></div>
+     <p class="copy">© 2024 ThanhTung-TranTu</p>
 </div>
 <!--  ALL  SAN PHAM O  DAY  :))  -->
 <!-- <div class="Main">

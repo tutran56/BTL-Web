@@ -4,42 +4,133 @@
 }
 /* root */
 :root{
+     --tong-text-color: rgba(255, 255, 255, 0.678);
      --body-color: rgb(222, 214, 214);
      --hed-color: #be7b48;
 }
 /*  San-Pham */
 .Tong-San-Pham{
      float: left;
-     width: 90%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
      margin-top: 8%;
-     margin-left: 4%;
+     
+}
+.Tong-Text{
+     margin-left: 5%;
+     float: left;
+     width: 650px;
+     height: 100%;
+     background-color:rgba(255, 255, 255, 0.678);
+     border-radius: 10px 10px 10px 10px;
 
+     /* border: 2px solid black; */
 }
 .San-Pham{
      border: 1px solid white;
      float: left;
-     width: 50%;
+     width: 660px;
      height: 450px;
-     background-color: white;
+     /* background: rgb(98,96,120);
+     background: rgb(34,193,195);
+     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+     background-color: #be814861;
      border-radius: 10px 120px 10px 10px;
+     transition: all 0.2s linear;
+}
+.San-Pham:hover .img-San-Pham{
+     transform: scale(1.1);
 }
 .img-San-Pham{
-     width: 45%;
-     height: auto;
+     width: 40%;
+     height: 450px;
      transform: translate(-50% -50%);
      text-align: center;
      margin-left: 25%;
+     transition: all 0.2s linear;
 }
-.text-San-Pham{
-     margin-left: 4%;
-     border: 1px solid black;
-     float: left;
-     width: 45%;
-     height: auto;
-     background-color: var(--body-color);
-}
-.title{
-     padding: 25px;
-     font-size: 25px;
+.text-title{
+     display: inline-block;
+     font-size: 40px;
+     color: black;
+     font-weight: bold;
+     padding-bottom: 20px;
+     /* text-decoration: underline; */
 
+}
+.hr-text{
+     width: 90%;
+     font-size: 20px;
+}
+.Star-Tong-Text{
+     padding-top: 20px;
+     padding-left: 20px;
+}
+h1{
+     padding: 20px;
+     color: rgb(255, 121, 3);
+}
+.Thongtin-Tong-Text,.text-main2-Thongtin{
+     margin-left: 3%;
+}
+.text-main-Thongtin{
+     font-weight: bold;
+}
+.link-Thongtin{
+     font-size: 15px;
+     text-decoration: none;
+     color: #0630dc
+}
+.link-Thongtin:hover{
+     text-decoration:underline;
+     color: red;
+}
+.Size-Tong-Text{
+     margin-left: 3%;
+}
+.Size{
+     display: block;
+     position: relative;
+     float: left;
+     font-size: 25px;
+}
+.custom-radio input[type="radio"] {
+     display: none;
+   }
+   
+   .custom-radio .radio-circle {
+     text-align: center;
+     /* justify-content: center; */
+     padding-top: 10px;
+     display: inline-block;
+     width:  40px;
+     height: 40px;
+     border-radius: 50%;
+     border: 2px solid var(--hed-color); 
+     /* top: 4px;  */
+     margin-right: 8px; 
+     cursor: pointer;
+   }
+   
+.custom-radio input[type="radio"]:checked + .radio-circle {
+     color: white;
+     background-color: var(--hed-color);
+}
+input[type="radio"]{
+     display: none;
+}
+.star-label:hover{
+     color: gold;
+}
+input[type="radio"]:checked ~.star-label .star{
+     color: gold;
+}
+.SoLuong{
+     margin-left: 3%;
+     margin-top: 10px;
+}
+.Buy{
+     
 }

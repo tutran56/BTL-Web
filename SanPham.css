@@ -8,34 +8,38 @@
      --hed-color: #be7b48;
 }
 /*  San-Pham */
-.San-Pham{
-     display: flex;
-     float: left; 
-     width: 50%;
-     margin-top: 150px;
-     margin-left: 2%;
-}
-.div-img-San-Pham{
-     display: block;
+.Tong-San-Pham{
      float: left;
-     width: 100%;
-     height: 450px;
-     border-radius: 5px 150px 5px 5px;
-     border: 1px solid var(--hed-color);
-     box-shadow:  0px 0px 1px 1px #7f6666;
-     background-color: white;
-}
-.img-San-Pham{
-     border-radius: 0px 150px 0px 0px;
-     width: auto;
-     height: 100%;
-     object-fit: cover;
-     object-position:right;
-     margin-left: 100px;
-}
-.img-San-Pham:hover{
+     width: 90%;
+     margin-top: 8%;
+     margin-left: 4%;
 
 }
+.San-Pham{
+     border: 1px solid white;
+     float: left;
+     width: 50%;
+     height: 450px;
+     background-color: white;
+     border-radius: 10px 120px 10px 10px;
+}
+.img-San-Pham{
+     width: 45%;
+     height: auto;
+     transform: translate(-50% -50%);
+     text-align: center;
+     margin-left: 25%;
+}
 .text-San-Pham{
-     
+     margin-left: 4%;
+     border: 1px solid black;
+     float: left;
+     width: 45%;
+     height: auto;
+     background-color: var(--body-color);
+}
+.title{
+     padding: 25px;
+     font-size: 25px;
+
 }

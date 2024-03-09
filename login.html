@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
-    <style>
-        .form-box {
-            background-image: url("img/cafe111.jpg");
-            background-size: cover;
-            display: flex;
-            justify-content: center; 
-            flex-wrap: wrap;
-            height: auto;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-            form {
-            width: 400px;
-            margin: 0 auto;
-        }
-        }
+  <link rel="stylesheet" href="./css/Home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .logo{
+      position: relative;
+      
+    }
+    .img-logo{
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+    .text-logo{
+      display: inline-block;
+      position: absolute;
+      top :15%;
+      left: 50%;
+      width: 1%;
 
-        .form-box {
-    position: fixed;
-    bottom: 0;
+    }
+
+    /* /////////////////////////////////////////// */
+    .form-box {
+    position: sticky;
     top: 10px;
     left: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
         form {
-            width: 400px;
+            width: 100%;
             margin: 0 auto;
         }
 
@@ -46,15 +56,22 @@
         }
 
         .inputbox label {
-            position: absolute;
-            top: 50%;
-            left: 5px;
-            transform: translateY(-50%);
-            color: rgb(0, 0, 0);
-            font-size: 1em;
-            pointer-events: none;
-            transition: 0.5s;
-        }
+    position: absolute;
+    top: 0%;
+    left: 5px;
+    transform: translateY(-100%);
+    color: rgb(239, 232, 232);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:focus + label,
+.inputbox input:not(:placeholder-shown) + label {
+    top: 0%;
+    transform: translateY(-100%);
+    font-size: 0.8em;
+}
 
         .inputbox input:focus~label,
         .inputbox input:valid~label {
@@ -133,231 +150,125 @@
         .register p a:hover {
             text-decoration: underline;
         }
-        .footer{
-            display: inline-block;
-               margin-top: 100px;
-               border: 1px solid black;
-               height: auto;width: 100%;
-               background-color: rgb(10, 1, 1);
-               color: white;
-               position: inherit;
-               
-          }
-          .logo-vs-text{
-               margin-top: 5%;
-               margin-left: 3%;
-               float: left;
-               left: 30%;
-               text-align: center;
-          }
-          #logo_footer{
-               background-image: url('./img/logo.jpg');
-               width: 100px;height: auto;
-               background-size: 200%;
-               
-          }
-          .textmap {
-    color: aliceblue;
-    font-size: 100%;
-    padding-bottom: 10px;
-}
-          .h2_footer{
-               color: rgb(248, 244, 244);
-
-          }
-          .DoiTac{
-               margin-top:5%;
-               margin-left:9%;
-          }
-          .chung{
-               float:left;
-          }
-          #text-doiTac{
-               text-align: center;
-               color:rgb(245, 247, 250);
-               padding:10px;
-               
-          }
-          .fa-chevron-circle-up {
-    display: inline-block;
-    margin-top: 2%;
-    margin-left: 1%;
-    font-size: 200%;
-    transform: 0.5s;
-    color: rgb(246, 242, 242);
-}
-          .col,.col1,.col2{
-               column-count:2;
-          }
-
-          .Pay{
-               margin-top:5%;
-               margin-left:9%;
-               
-          }
-          .link-pay{
-               color:aqua;
-          }
-          .item_pay{
-               font-size: 35px;
-          }
-          .item-mxh{
-               text-decoration: none;
-               color: rgb(19, 119, 207);
-               font-weight: bold;
-               font-size: 20px;
-               margin-top: 20px;
-               
-          }
-          #text-mxh{
-               padding: 20px;
-               color: yellow;
-          }
-          .copy{
-               font-size: 15px;
-               clear: both;
-               text-align: center;
-               position: relative;
-               bottom: 0px;
-          }
-          .fa-chevron-circle-up{
-               display: inline-block;
-               margin-top: 2%;
-               margin-left: 1%;
-               font-size: 200%;
-               transform: 0.5s;
-               color: rgb(24, 8, 8);
-          }
-          .link_backup{
-               text-decoration: nono;
-          }
-          .text_backup{
-               clear: auto;
-               color: rgb(231, 238, 245);
-          }
-          .fa-chevron-circle-up {
-    display: inline-block;
-    margin-top: 2%;
-    margin-left: 1%;
-    font-size: 200%;
-    transform: 0.5s;
-    color: rgb(246, 242, 242);
-}
-         
-          .col_chungtoi1,.col_chungtoi0{
-               float: left;
-               width: 70%;
-          }
-          .Footer {
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.762);
-}
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-user agent stylesheet
-div {
-    display: block;
-}
-:root {
-    --body-color: rgb(222, 214, 214);
-    --hed-color: #be7b48;
-}
-injected stylesheet
-:host, :root {
-    --rem: 16;
-}
-::selection {
-    background-color: rgb(0, 216, 216) !important;
-    color: white !important;
-}
-          
-    </style>
+        .form-value{
+            width:300px;
+        }
+    /* //////////////////////////////////////////// */
+    @media only screen and (max-width: 800px){
+      .text-logo{
+      display: inline-block;
+      position: absolute;
+      top :10%;
+      left: 50%;
+      width: 1%;
+      }        
+      .img-logo{
+        object-fit: cover;
+        height: 500px;
+      } 
+    }
+    @media only screen and (max-width: 428px){
+    .text-logo{
+      top: 1%;
+    }
+    
+    }
+  
+  </style>
 </head>
-
 <body>
-    <div class="header">
-        <p>thanhtung</p>
-    </div>
-    <div class="form-box">
-        <div class="form-value">
-            <form action="">
-                <h2>ĐĂNG NHẬP</h2>
-                <div class="inputbox">
-                    <ion-icon name="mail"></ion-icon>
-                    <input type="text" required>
-                    <label for="">Email</label>
-                </div>
-                <div class="inputbox">
-                    <ion-icon name="lock"></ion-icon>
-                    <input type="password" required>
-                    <label for="">Mật khẩu</label>
-                </div>
-                <div class="forget">
-                    <label for=""><input type="checkbox">Ghi nhớ <a href="#">Quên mật khẩu</a></label>
-                </div>
-                <button>Đăng nhập</button>
-                <div class="register">
-                    <p>Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-<div class="footer">
-                <hr>
-                <div class="logo-vs-text">
-                     <div class="logoFooter">
-                          <img src="./img/logo.jpg" alt="logo.img"id="logo_footer">
-                     </div>
-                     <div><h2 class="h2_footer">Coffee Place</h2>
-                          <p class="textmap textmap_cty">Công ty cổ phần coffee DNU</p>
-                          <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
-                          <p class="textmap">Điện Thoại: (024)335577799</p>
-                          <p class="textmap">Email: dnu@dainam.edu.vn</p>
-                     </div>
-                </div>
-                <div class="DoiTac chung">
-                     <p id="text-doiTac">Đối Tác Chúng Tôi</p>
-                     <div class="col">
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-01.jpg"></div>
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-02.jpg"></div>
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-03.jpg"></div>
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-04.jpg"></div>
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-05.jpg"></div>
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-06.jpg"></div>
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-07.jpg"></div>
-                          <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-08.jpg"></div>
-                     </div>
-                </div>
-                <div class="Pay chung">
-                     <p id="text-doiTac">Đối Tác Thanh Toán</p>
-                     <div class="col1">
-                          <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-visa.png"></div>
-                          <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-master.png"></div>
-                          <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-jcb.png"></div>
-                          <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-atm.png"></div>
-                          <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-cod.png"></div>
-                          <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/alepay.png"></div>
-                          <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/payoo.png"></div>
-                     </div>
-                      <a class="link-pay" href="thanhtoan.html">Cách thức thanh toán</a> 
-                </div>
-                <div class="all-mxh chung Pay">
-                     <p id="text-doiTac">Các Trang Mạng Xã Hội</p>
-                     <div class="col2">
-                          <div class="item_mxh"><a class="item-mxh" href="https://facebook.com">Facebook</a></div>
-                          <div class="item_mxh"><a class="item-mxh" href="https://youtube.com">Youtube</a></div>
-x                          <div class="item_mxh"><a class="item-mxh" href="https://zalo.com">Zalo</a></div>
-                     </div>
-                     
-                </div>
-                <div><a class="link_backup" href="#Home"><i class="back-up fas fa-chevron-circle-up"></i></a><p class="text_backup">Trở về Đầu</p></div>
-                <p class="copy">© 2024 ThanhTung-TranTu</p>
+  <div class="logo">
+    <img class="img-logo" src="./img/cafe111.jpg" alt="img">
+    <div class="text-logo">
+<!-- //////////////////////////////////////// -->
+<div class="form-box">
+  <div class="form-value">
+      <form action="">
+          <h2>ĐĂNG NHẬP</h2>
+          <div class="inputbox">
+              <ion-icon name="mail"></ion-icon>
+              <input type="text" required>
+              <label for="">Email</label>
+          </div>
+          <div class="inputbox">
+              <ion-icon name="lock"></ion-icon>
+              <input type="password" required>
+              <label for="">Mật khẩu</label>
+          </div>
+          <div class="forget">
+              <label for=""><input type="checkbox">Ghi nhớ <a style="color: red; font-weight: bold;" href="#">Quên mật khẩu</a></label>
+          </div>
+          <button>Đăng nhập</button>
+          <div class="register">
+              <p>Chưa có tài khoản? <a class="link-a" href="#">Đăng ký ngay</a></p>
+          </div>
+      </form>
+  </div>
 </div>
-</body>
 
+
+<!-- //////////////////////////////////////// -->
+
+    </div>
+    <!--///////// footer  -->
+
+    <div class="Footer">
+      <hr>
+      <div class="logo-vs-text">
+           <div class="logoFooter">
+                <img src="./img/logo.jpg" alt="logo.img"id="logo_footer">
+           </div>
+           <div><h2 class="h2_footer">Coffee Place</h2>
+                <p class="textmap textmap_cty">Công ty cổ phần Coffee Place</p>
+                <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+                <p class="textmap">Điện Thoại: (024)335577799</p>
+                <p class="textmap">Email: dnu@dainam.edu.vn</p>
+           </div>
+      </div>
+      <div class="DoiTac chung">
+           <p id="text-doiTac">Đối Tác Chúng Tôi</p>
+           <div class="col">
+                <div class="item_dt"><img src="img/img-logo/partner-3-01.jpeg"></div>
+                <div class="item_dt"><img src="img/img-logo/partner-3-02.jpeg"></div>
+                <div class="item_dt"><img src="img/img-logo/partner-3-03.jpeg"></div>
+                <div class="item_dt"><img src="img/img-logo/partner-3-04.jpeg"></div>
+                <div class="item_dt"><img src="img/img-logo/partner-3-05.jpeg"></div>
+                <div class="item_dt"><img src="img/img-logo/partner-3-06.jpeg"></div>
+                <div class="item_dt"><img src="img/img-logo/partner-3-07.jpeg"></div>
+                <div class="item_dt"><img src="img/img-logo/partner-3-08.jpeg"></div>
+           </div>
+      </div>
+      <div class="Pay chung">
+           <p id="text-doiTac">Đối Tác Thanh Toán</p>
+           <div class="col1">
+                <div class="item_pay"><img src="img/img-logo/logo-payment-visa.png"></div>
+                <div class="item_pay"><img src="img/img-logo/logo-payment-master.png"></div>
+                <div class="item_pay"><img src="img/img-logo/logo-payment-jcb.png"></div>
+                <div class="item_pay"><img src="img/img-logo/logo-payment-atm.png"></div>
+                <div class="item_pay"><img src="img/img-logo/logo-payment-cod.png"></div>
+                <div class="item_pay"><img src="img/img-logo/alepay.png"></div>
+                <div class="item_pay"><img src="img/img-logo/payoo.png"></div>
+           </div>
+            <a class="link-pay" href="thanhtoan.html">Cách thức thanh toán</a> 
+      </div>
+      <div class="all-mxh chung Pay">
+           <p id="text-doiTac">Các Trang Mạng Xã Hội</p>
+           <div class="col2">
+                <div class="item_mxh"><a class="item-mxh" href="https://facebook.com">Facebook</a></div>
+                <div class="item_mxh"><a class="item-mxh" href="https://youtube.com">Youtube</a></div>
+                <div class="item_mxh"><a class="item-mxh" href="https://tiktok.com">TikTok</a></div>
+                <div class="item_mxh"><a class="item-mxh" href="https://zalo.com">Zalo</a></div>
+           </div>
+           
+      </div>
+      <p class="copy">© 2024 ThanhTung-TranTu</p>
+  </div>
+  
+<!-- ////////////////////////////////////// -->
+  </div>
+<!-- footer -->
+
+
+
+</body>
 </html>

@@ -4,38 +4,133 @@
 }
 /* root */
 :root{
+     --tong-text-color: rgba(255, 255, 255, 0.678);
      --body-color: rgb(222, 214, 214);
      --hed-color: #be7b48;
 }
 /*  San-Pham */
-.San-Pham{
-     display: flex;
-     float: left; 
-     width: 50%;
-     margin-top: 150px;
-     margin-left: 2%;
-}
-.div-img-San-Pham{
-     display: block;
+.Tong-San-Pham{
      float: left;
      width: 100%;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-top: 8%;
+     
+}
+.Tong-Text{
+     margin-left: 5%;
+     float: left;
+     width: 650px;
+     height: 100%;
+     background-color:rgba(255, 255, 255, 0.678);
+     border-radius: 10px 10px 10px 10px;
+
+     /* border: 2px solid black; */
+}
+.San-Pham{
+     border: 1px solid white;
+     float: left;
+     width: 660px;
      height: 450px;
-     border-radius: 5px 150px 5px 5px;
-     border: 1px solid var(--hed-color);
-     box-shadow:  0px 0px 1px 1px #7f6666;
-     background-color: white;
+     /* background: rgb(98,96,120);
+     background: rgb(34,193,195);
+     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+     background-color: #be814861;
+     border-radius: 10px 120px 10px 10px;
+     transition: all 0.2s linear;
+}
+.San-Pham:hover .img-San-Pham{
+     transform: scale(1.1);
 }
 .img-San-Pham{
-     border-radius: 0px 150px 0px 0px;
-     width: auto;
-     height: 100%;
-     object-fit: cover;
-     object-position:right;
-     margin-left: 100px;
+     width: 40%;
+     height: 450px;
+     transform: translate(-50% -50%);
+     text-align: center;
+     margin-left: 25%;
+     transition: all 0.2s linear;
 }
-.img-San-Pham:hover{
+.text-title{
+     display: inline-block;
+     font-size: 40px;
+     color: black;
+     font-weight: bold;
+     padding-bottom: 20px;
+     /* text-decoration: underline; */
 
 }
-.text-San-Pham{
+.hr-text{
+     width: 90%;
+     font-size: 20px;
+}
+.Star-Tong-Text{
+     padding-top: 20px;
+     padding-left: 20px;
+}
+h1{
+     padding: 20px;
+     color: rgb(255, 121, 3);
+}
+.Thongtin-Tong-Text,.text-main2-Thongtin{
+     margin-left: 3%;
+}
+.text-main-Thongtin{
+     font-weight: bold;
+}
+.link-Thongtin{
+     font-size: 15px;
+     text-decoration: none;
+     color: #0630dc
+}
+.link-Thongtin:hover{
+     text-decoration:underline;
+     color: red;
+}
+.Size-Tong-Text{
+     margin-left: 3%;
+}
+.Size{
+     display: block;
+     position: relative;
+     float: left;
+     font-size: 25px;
+}
+.custom-radio input[type="radio"] {
+     display: none;
+   }
+   
+   .custom-radio .radio-circle {
+     text-align: center;
+     /* justify-content: center; */
+     padding-top: 10px;
+     display: inline-block;
+     width:  40px;
+     height: 40px;
+     border-radius: 50%;
+     border: 2px solid var(--hed-color); 
+     /* top: 4px;  */
+     margin-right: 8px; 
+     cursor: pointer;
+   }
+   
+.custom-radio input[type="radio"]:checked + .radio-circle {
+     color: white;
+     background-color: var(--hed-color);
+}
+input[type="radio"]{
+     display: none;
+}
+.star-label:hover{
+     color: gold;
+}
+input[type="radio"]:checked ~.star-label .star{
+     color: gold;
+}
+.SoLuong{
+     margin-left: 3%;
+     margin-top: 10px;
+}
+.Buy{
      
 }

@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <style>
-        body {
+        .form-box {
             background-image: url("img/cafe111.jpg");
             background-size: cover;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 1000px;
+            justify-content: center; 
+            flex-wrap: wrap;
+            height: auto;
+            background-repeat: no-repeat;
             margin: 0;
             padding: 0;
             form {
@@ -24,6 +25,7 @@
         .form-box {
     position: fixed;
     bottom: 0;
+    top: 10px;
     left: 0;
     width: 100%;
 }
@@ -278,6 +280,9 @@ injected stylesheet
 </head>
 
 <body>
+    <div class="header">
+        <p>thanhtung</p>
+    </div>
     <div class="form-box">
         <div class="form-value">
             <form action="">
@@ -300,7 +305,9 @@ injected stylesheet
                     <p>Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
                 </div>
             </form>
-            <div class="footer">
+        </div>
+    </div>
+<div class="footer">
                 <hr>
                 <div class="logo-vs-text">
                      <div class="logoFooter">
@@ -350,11 +357,7 @@ x                          <div class="item_mxh"><a class="item-mxh" href="https
                 </div>
                 <div><a class="link_backup" href="#Home"><i class="back-up fas fa-chevron-circle-up"></i></a><p class="text_backup">Trở về Đầu</p></div>
                 <p class="copy">© 2024 ThanhTung-TranTu</p>
-           </div>    
-      
-        </div>
-        
-    </div>
+</div>
 </body>
 
 </html>

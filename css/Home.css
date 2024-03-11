@@ -325,7 +325,9 @@ ul {
 margin-left: 15%;
 margin-top: 2%;
 }
-
+.Menu-Bard{
+     display: none;
+}
 input#search-Menu {
 font-size: 15px;
 padding: 6px;
@@ -662,14 +664,81 @@ font-size: 1.2em;
 }
 
 /* ///////////////////////////////////// */
+@media only screen and (max-width: 320px){
+     li.Menu-Bard{
+          display: none;
+     }
+     .Search_Menu{
+          margin-left: 1px ;
+     }
+
+     .span{
+          padding: 10px;
+     }
+     .span:hover{
+          transform: scale(1.03);
+     }
+}
 @media only screen and (max-width: 428px){
+     a.link-Menu, h2{
+          display: none;
+
+     }
+     .Menu-Bard{
+          display:  block;
+          margin-top: -25%;
+          margin-left: -75%;
+          font-size: 25px;
+
+     }
+     .Home-img{
+          margin-top: 80px;
+     }
+     .text-ads{
+          display:none;
+     }
+     .text-Home{
+          display: inline-block;
+          position: absolute;
+          top: 21%;
+          left: 35%;
+          font-size: 20px;
+          transform: translate(-50%, -50%);
+          flex-wrap: wrap;
+          text-align: center;
+          font-family: Arial, sans-serif;
+          font-weight: bold;
+          letter-spacing: 2px;
+          padding: 10px;
+          color: aliceblue;
+     }
+     .span{
+          margin-bottom: 5px;
+     }     
+     .span:hover{
+               transform: scale(1.1);
+     }
+     .span-blog{
+          margin-bottom: 10px;
+          transition: all 0.3s linear;
+     }
+     .span-blog:hover{
+          transform: scale(1.05);
+     }
+     .text-mar-Contacts{
+          display: none;
+     }
+     .text-Contacts{
+          width: 90%;
+          left: 5%;
+          top: 20%;
+     }
      .text_coffee{
           font-size: 17px;
      }
      .chung{
           margin-left: 25%;
      }
-
 }
 @media only  screen and (max-width:360px){
      .fab{
@@ -684,6 +753,9 @@ font-size: 1.2em;
      #home_menu, #home_Hien, .text_menu{
           display: none;
      }
+     li.Menu-Bard{
+          display: none;
+     }
      #home_menu2{
           display: block;
           opacity: 0.8;
@@ -692,7 +764,7 @@ font-size: 1.2em;
           display: inline-block;
           font-size: 2.2em;
           position: absolute;
-          top: 1em;right: 2%;
+          top: 1.2em;right: 2%;
      }
      .marquee{
           display: none;
@@ -705,6 +777,9 @@ font-size: 1.2em;
           width: 90%;
           margin-left: 7%;
      }
+     input#search-Menu{
+          font-size: 12px;
+     }
      #home_menu2:hover{
           color: brown;
           cursor: pointer;
@@ -713,6 +788,20 @@ font-size: 1.2em;
           display: block;
      }   
 }   
+@media only screen and (max-width:700px  ) {
+     input#search-Menu{
+          padding: 6px;
+          width: 100px;
+          margin-left: 70px;
+     }
+     ._Menu{
+          margin-left: 10px;
+     }
+     .text-ads{
+          display: none;
+     }
+     
+}
 @media only screen and (max-width:1280px  ) {
      .all-mxh{
           margin-left: 45%;
@@ -720,10 +809,18 @@ font-size: 1.2em;
      #text-doiTac{
           margin-left: -25px;
      }
+}    li.Menu-Bard{
+     display: none;
 }
 @media only screen and (max-width:1280px  ) {
      .all-mxh{
-          margin-left: 27%;
+          margin-left: 45%;
      }
 
+}
+@media only screen and (max-width:2000px  ) {
+     input#search-Menu{
+          display: inline;
+          margin-top: -199px;
+     }
 }

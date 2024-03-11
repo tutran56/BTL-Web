@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh Toan</title>
-
-    <title>Hướng dẫn thanh toán</title>
-    <link rel="stylesheet" href="./css/Home.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Hướng dẫn thanh toán</title>
+     <link rel="shortcut icon" href="./img/logo.jpg">
+     <link rel="stylesheet" href="./css/Home.css">
 
     <style>
         body {
@@ -17,6 +20,7 @@
  HEAD
 
         .hed {
+            position:sticky;
             border: 0.1px solid rgba(40, 24, 24, 0.332);
             background-color: rgb(216, 155, 75);
             object-position: right;
@@ -24,7 +28,7 @@
             height: 5em;
             text-align: center;
             margin: 0;
-            padding: 0;
+            padding: 10px;
             z-index: 9999;
         }
 
@@ -64,6 +68,7 @@
             margin: 20px;
         }
         .frame {
+        
             width: 600px;
             border: 1px solid #ccc;
             padding: 20px;
@@ -77,9 +82,30 @@
         }
 
         .anh {
-            height: auto;
-            max-width: 100%;
-        }
+  height: auto;
+  max-width: 100%;
+}
+
+/* Media query cho điện thoại */
+@media only screen and (max-width: 767px) {
+  .anh {
+    /* Các thuộc tính tùy chỉnh cho điện thoại */
+   
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Media query cho máy tính để bàn */
+@media only screen and (min-width: 768px) {
+  .anh {
+    /* Các thuộc tính tùy chỉnh cho máy tính để bàn */
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
         .home-link {
     position:fixed;
     top: 1px;
@@ -241,29 +267,29 @@ injected stylesheet
 
     <div id="header">
         <div class="contai-all_menu" id="Home">
-            <div class="hed">
-                <div class="logo"><img class="logo_" src="img/logo.jpg" alt=""></div>
-                <div class="text_coffee">
-                    <h1>Coffee Place</h1>
-                    <p>Vì sức khỏe vì tương lai</p>
-                    <div class="home-link">
-                        <button onclick="window.location.href='index.html'">Trang chủ</button>
-                    </div>
-        </div>
-  
-              <span id="logo_user" class="material-symbols-outlined">
-                   <!-- <input type="search" class="search"> -->
-
-              </span>
-         </a>
-         </div>
-=======
-    <!--  Thêm  phần hearder này  nhé  tôi  mới chỉnh lại cho  ô  r đấy
-    Xem thêm File NOTE.txt nhé!
-    
-    -->
-  
-                 
+             <div class="hed">
+                  <div class="logo"><img class="logo_" src="img/logo.jpg" alt=""></div>
+                  <div class="_Menu">
+                       <ul>
+                           <li class="Menu"><a class="link-Menu" href="#Home-img">Home</a></li>
+                           <li class="Menu"><a href="#Product" class="link-Menu">Product</a></li>
+                           <li class="Menu"><a href="#Blogs" class="link-Menu">Blogs</a></li>
+                           <li class="Menu"><a href="#Contacts" class="link-Menu">Contacts</a></li>
+                           <li class="Menu"><a href="#About" class="link-Menu">About</a></li>
+                           
+                           <li class="Search_Menu">
+                               <input id="search-Menu" type="text" placeholder="Search">
+                            </li>
+                            <li class="Search_Menu Search"><i class="fas-icon fas fa-search"></i>
+                            </li>
+                       </ul>
+                   </div>
+                   <a href="login.html">
+                        <span id="logo_user" class="material-symbols-outlined">
+                             <!-- <input type="search" class="search"> -->
+                             account_circle
+                            </span>
+                  </a>
                   <div class="buy"><i class=" buy fas fa-shopping-cart"></i></div>
                   </div>
                   <div class="mxh">
@@ -271,10 +297,7 @@ injected stylesheet
                        <div><a href="https://facebook.com" class="link_mxh" target="_blank"><i class="fab fa-facebook-square"style="color: #3568c0"></i></a></div>
                   </div>
              </div>
-</div>
-    <div class="header">
-
-    </div>
+   </div>
 
     <div class="container">
         <h2>Hướng dẫn thanh toán</h2>

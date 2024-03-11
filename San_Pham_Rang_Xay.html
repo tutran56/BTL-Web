@@ -9,9 +9,22 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="./img/logo.jpg">
-     <link rel="stylesheet" href="SanPham.css">
+     <link rel="stylesheet" href="./css/San-Pham/SanPham_Espresso.css">
      <link rel="stylesheet" href="./css/San-Pham/coffee_hat.css">
      <title>Sản phẩm Hộp</title>
+     <style>
+          .img-San-Pham{
+               width: 90%;
+               margin-left: 10px;
+          }
+/* ////////@media /////////////*/
+@media only screen and (max-width:  428px) {
+     .img-San-Pham{
+          margin-left: 20px;
+     }
+}
+          
+     </style>
 </head>
 <body>
      <div id="header">
@@ -22,9 +35,9 @@
                          <ul>
                              <li class="Menu"><a class="link-Menu" href="Coffee.html">Home</a></li>
                              <li class="Menu"><a href="#Product" class="link-Menu">Product</a></li>
-                             <li class="Menu"><a href="#Blogs" class="link-Menu">Blogs</a></li>
-                             <li class="Menu"><a href="lienhe.html" class="link-Menu">Contacts</a></li>
-                             <li class="Menu"><a href=" " class="link-Menu">About</a></li>
+                             <li class="Menu"><a href="Coffee.html#Blogs" class="link-Menu">Blogs</a></li>
+                             <li class="Menu"><a href="Coffee.html#Contacts" class="link-Menu">Contacts</a></li>
+                             <li class="Menu"><a href="#About" class="link-Menu">About</a></li>
                              
                              <li class="Search_Menu">
                                  <input id="search-Menu" type="text" placeholder="Search">
@@ -49,7 +62,7 @@
      </div>
      <div class="Tong-San-Pham">
           <div class="San-Pham">
-               <img src="./img/sp1-remove.png" alt="" class="img-San-Pham">
+               <img src="./img/sp4-remove.png" alt="" class="img-San-Pham">
                <div class="icon-San-Pham">
                <i class="Fab fab fa-facebook-square"></i>
                <i class="Fab fab fa-linkedin-in"></i>
@@ -79,7 +92,7 @@
                </div>
                <div class="Thongtin-Tong-Text">
                     <p class="text-main-Thongtin">Thông tin Sản Phẩm: </p>
-                    <p class="text-main2-Thongtin">-Gói Coffee Espresso Nguyên chất 100% <br>-Xuất Sứ: Pháp<br>Trọng Lượng có nhiều kích thước lựa chọn<br><a href="#mota" class="link-Thongtin">Chi tiết tại đây!</a> </p>
+                    <p class="text-main2-Thongtin">-Gói Coffee Espresso Nguyên chất 100% <br>-Xuất Sứ: Ý<br>Trọng Lượng có nhiều kích thước lựa chọn<br><a href="#mota" class="link-Thongtin">Chi tiết tại đây!</a> </p>
                </div>
                <div class="Size-Tong-Text">
                     <label class="Size" for="Size">Size:</label><br><br>
@@ -113,46 +126,20 @@
            -->
      </div>
      <div class="Tong-text-Mota">
-          <p>
-               Cà phê hạt là sản phẩm được tạo ra từ việc xay mịn hạt cà phê rang. Đây là loại cà phê phổ biến nhất hiện nay, được ưa chuộng bởi hương vị thơm ngon và cách pha chế tiện lợi.</p>
-             <p>Để làm nên được những ly cà phê ngon, mỗi nơi sản xuất sẽ có công thức chế biến cà phê bột riêng. Mỗi cách chế biến khác nhau, tạo nên những hương vị khác nhau</p>
-             <p class="text-h2" style="border: none; margin-top: 10px">Cà phê hạt - Khúc ca của đam mê</p>
-             <p>Cà phê hạt không chỉ đơn thuần là một thức uống, mà còn là một biểu tượng văn hóa, một nét đẹp trong đời sống con người. Mang hương vị đậm đà, nồng nàn, cà phê ẩn chứa những câu chuyện, những đam mê và cả những khoảnh khắc đáng nhớ.</p>
-             <p class="text-h2">Hành trình từ hạt cà phê đến ly cà phê thơm ngon:</p>
-             <p>Hạt cà phê: Được vun trồng cẩn thận trên những mảnh đất bazan màu mỡ, dưới ánh nắng chan hòa, tạo nên những hạt cà phê chất lượng.
-               <br>Thu hoạch: Những trái cà phê chín mọng được thu hoạch cẩn thận, đảm bảo giữ nguyên hương vị tự nhiên.
-               <br>  Chế biến: Cà phê trải qua quá trình chế biến tỉ mỉ, loại bỏ tạp chất, phơi sấy để đạt độ ẩm thích hợp.
-               <br>  Rang xay: Hạt cà phê được rang bằng kỹ thuật chuyên biệt, tạo nên hương vị và màu sắc đặc trưng.
-               <br>  Pha chế: Cà phê bột được pha chế theo nhiều cách khác nhau, mang đến những trải nghiệm độc đáo.
-          </p>
-                    
-          <p class="text-h2">Cà phê - Biến tấu đa dạng:</p>
-          <p>Cà phê bột có thể được pha chế theo nhiều cách khác nhau, đáp ứng mọi sở thích và nhu cầu:
-               <div class="center">
-                    <img src="img/van-hoa-ca-phe-y-tren-the-gioi.webp" alt="Van hoa huong vi ca phe" width="500" >
-                
-                </div>
-          <br>  Pha phin: Cách pha truyền thống, mang đến hương vị cà phê đậm đà, nguyên bản.
-          <br> Pha máy: Tiện lợi, nhanh chóng, cho ly cà phê sánh mịn, thơm ngon.
-          Pha bằng vợt: Đơn giản, dễ dàng, phù hợp cho những ai yêu thích sự tiện lợi.
-          Cà phê pha lạnh: Thưởng thức cà phê mát lạnh, sảng khoái, thích hợp cho những ngày nóng bức.
-          Cà phê sữa đá: Vị đắng hòa quyện cùng vị béo ngậy của sữa, tạo nên thức uống được yêu thích.
-          Cà phê Espresso: Vị cà phê đậm đặc, mạnh mẽ, dành cho những ai yêu thích hương vị cà phê nguyên bản.</p>
-          <p class="text-h2">Hơn cả một thức uống:</p>
-          <p>Cà phê bột không chỉ là thức uống giúp bạn tỉnh táo, tập trung mà còn mang đến nhiều lợi ích cho sức khỏe:
-          Chống oxy hóa, bảo vệ cơ thể khỏi các tác nhân gây hại.
-          Tăng cường trí nhớ, cải thiện khả năng tập trung.
-          Giảm nguy cơ mắc một số bệnh như tiểu đường, tim mạch...
-          Giúp giảm cân, tăng cường trao đổi chất.
-          Tăng cường sức khỏe gan, hỗ trợ tiêu hóa.</p>
+          <p class="text-h2">Cà phê rang xay nguyên chất 100% </p>
+          <p>Cà phê rang xay nguyên chất là cà phê được chế biến từ nguyên liệu 100% hạt cà phê rang xay nguyên chất không pha trộn bất kì các loại tạp chất nào như bắp, đậu nành, đậu đen… và các chất hóa học tạo hương liệu, tạo màu. Hạt cà phê được ủ, rang và chế biến cùng với bơ hoặc rượu vang ở nhiệt độ áp suất phù hợp để giữ được vị đậm đà, sâu lắng, thức dậy khẩu vị của người sành cà phê     
           <div class="center">
-               <img class="text-mota-TU" src="img/cà phê không chỉ là một thức uống.jpeg" alt="Cà phê không chỉ là một thức uống " width="500" >
+               <img src="img/san_pham3_cocoffeRangXay.jpg" alt="Các loại cà phê rang xay" width="500" >
+               <figcaption>Các loại cà phê rang xay</figcaption>
           </div>
-          <p class="text-h2">Lựa chọn cà phê bột - Bí quyết để thưởng thức hương vị trọn vẹn:</p>
-          <p>Chọn cà phê nguyên chất: Tránh cà phê pha trộn tạp chất, hương liệu.
-          Chọn cà phê mới rang: Giữ được hương vị cà phê tốt nhất.
-          Chọn cà phê phù hợp với sở thích: Vị đắng, chua, hương thơm...
-          Bảo quản cà phê đúng cách: Nơi khô ráo, thoáng mát, tránh ánh nắng trực</p>
+          <p class="text-h2">Nguồn nguyên liệu</p>
+          <p>Cà phê rang xay tuyển chọn những hạt cà phê từ đồn điền cà phê công ty trồng ở vùng đất Buôn Ma Thuột.Để cho ra loại cà phê tốt thì cà phê được trồng trên diện tích lớn và được đánh giá là có chất lượng cao nhất, có hương vị đặc trưng nhất. Hạt cà phê đạt năng suất nhờ thổ nhưỡng, nguồn nước đồng thời được chế biến khô theo phương pháp truyền thống đến khi vỏ ngoài se lại mới cho vào máy tách, nên cà phê Coffee Tree luôn có hàm lượng caffeine cao hơn nhiều so với cà phê khác.</p>
+          <p class="text-h2">Công nghệ chế biến sạch</h4>
+          <p>Cùng với công nghệ chế biến sạch và một số bí quyết đặc biệt truyền thống, sản phẩm cà phê rgng xay không có yếu tố gây hại cho sức khỏe của người tiêu dùng. Đặc biệt chúng tôi cam kết không có bất kì một sự pha trộn tạp chất nào trong sản phẩm cà phê Coffee Tree của chúng tôi.</p>
+          <div class="center">
+               <img src="./img/Tehnology Cafe.jpeg" alt="Công nghệ chế biến cà phê hạt rang xay" width="500" >
+               <figcaption>Công nghệ chế biến cà phê hạt rang xay</figcaption>
+          </div>
      </div>
      <div id="danhgia" class="Nhan-Xet">
           <span class="text-Nhan-Xet">Nhận Xét</span>
@@ -198,36 +185,9 @@
                <i class="sao fas fa-star"></i>(0)
           </div>
      </div>
-     <!-- <div class="Tong-Mota">
-          <div id="mota" class="mota">
-               <div class="text-Mota">Mo ta san pham</div>
-               <div class="scroll">
-                    
-     
+     <div id="Product" class="Sp-Khac">
 
-     
-
-        
-               </div>
-          </div>
-          <div class="Sp">
-               <div class="text-Sp">
-                    
-                    <div id="Product" class="Product">
-                         <!-- <p class="text-Product">Product</p> 
-                         <div id="span" class="span"><img class="img-span" src="./img/sp1.webp" alt=""><p class="text-buy">100.000 đ <i class="fas fa-shopping-bag bag"></i></p><a href=" " class="text-span">Xem them</a></div>
-                         <div class="span"><img class="img-span" src="./img/sp2.webp" alt=""><p class="text-buy">100.000 đ <i class="fas fa-shopping-bag bag"></i></p><a href=" " class="text-span">Xem them</a></div>
-                         <div class="span"><img class="img-span" src="./img/sp4.jpg" alt=""><p class="text-buy">100.000 đ <i class="fas fa-shopping-bag bag"></i></p><a href=" " class="text-span">Xem them</a></div>
-                         <div class="span"><img class="img-span" src="./img/san_pham3_cocoffeRangXay.jpg" alt=""><p class="text-buy">100.000 đ <i class="fas fa-shopping-bag bag"></i></p><a href=" " class="text-span">Xem them</a></div>
-                    </div>
-               </div>
-          </div>
-     </div> -->
-    
-
-     <div class="Sp-Khac">
-
-          <div class="Product">
+          <div  class="Product">
                <p class="text-Product-Sp">Các Sản Phẩm Khác</p>
                <div class="Menu-Product">
                     <div class="span"><img class="img-span-Menu-Product" src="./img/menu4.webp" alt=""><p class="text-menu-product">Trà Xanh Espresso Marble</p><p class="text-buy">45.000 đ <i class="fas fa-shopping-bag bag"></i></p><p class="text-span">Xem Them</p></div>
@@ -243,7 +203,7 @@
                <div class="logoFooter">
                     <img src="./img/logo.jpg" alt="logo.img"id="logo_footer">
                </div>
-               <div><pclass="h2_footer">Coffee Place</h2>
+               <div><h2 class="h2_footer">Coffee Place</h2>
                     <p class="textmap textmap_cty">Công ty cổ phần Coffee Place</p>
                     <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
                     <p class="textmap">Điện Thoại: (024)335577799</p>

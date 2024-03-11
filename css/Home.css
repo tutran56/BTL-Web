@@ -660,3 +660,70 @@ font-size: 20px;
 .item-mxh-icon{
 font-size: 1.2em;
 }
+
+/* ///////////////////////////////////// */
+@media only screen and (max-width: 428px){
+     .text_coffee{
+          font-size: 17px;
+     }
+     .chung{
+          margin-left: 25%;
+     }
+
+}
+@media only  screen and (max-width:360px){
+     .fab{
+          color: rgba(0, 0, 255, 0.674);
+          font-size: 40px;
+     }
+     .text_sp{
+          font-size: 100%;
+     }
+}
+@media only screen and (max-width:  836px) {
+     #home_menu, #home_Hien, .text_menu{
+          display: none;
+     }
+     #home_menu2{
+          display: block;
+          opacity: 0.8;
+     }
+     #logo_user.material-symbols-outlined{
+          display: inline-block;
+          font-size: 2.2em;
+          position: absolute;
+          top: 1em;right: 2%;
+     }
+     .marquee{
+          display: none;
+     }
+     .search_tong{
+          display: inline-block;
+          position: relative;
+          top: -280%;
+          height: 10%;
+          width: 90%;
+          margin-left: 7%;
+     }
+     #home_menu2:hover{
+          color: brown;
+          cursor: pointer;
+     }
+     #mobile_menu{
+          display: block;
+     }   
+}   
+@media only screen and (max-width:1280px  ) {
+     .all-mxh{
+          margin-left: 45%;
+     }
+     #text-doiTac{
+          margin-left: -25px;
+     }
+}
+@media only screen and (max-width:1280px  ) {
+     .all-mxh{
+          margin-left: 27%;
+     }
+
+}

@@ -753,7 +753,7 @@ font-size: 1.2em;
 @media only screen and (max-width:2000px  ) {
      input#search-Menu{
           display: inline-block;
-          margin-top: -199px;
+          margin-top: -190px;
           width: 200px;
      }
      .buy{
@@ -790,7 +790,7 @@ font-size: 1.2em;
           height: 5em;width: 5em;
      }
      input#search-Menu{
-          margin-top: 2%;
+          /* margin-top:; */
           padding: 10px;
      }
      .link-Menu{

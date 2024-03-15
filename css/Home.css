@@ -33,7 +33,7 @@ body{
      /*background-color: rgb(238, 151, 38);*/
      background-color: #be7b48;
      object-position: right ;
-     width: 100%;height: 5em;
+     width: 100%;height: 5.5em;
      /*opacity:  0.855;*/
      text-align: center;
      margin: 0;
@@ -491,9 +491,7 @@ transition: all 0.3s ease;
 .text-mar-Contacts{
      font-size: 25px;
 }
-.Footer{
-     font-size: 25px;
-}
+
 input#search-Menu{
      display: inline;
      margin-top: -199px;
@@ -591,11 +589,11 @@ font-size: 20px;
 
 .span:hover .text-span {
 opacity: 1;
-transform: translate(-50%, -50%) scale(1.2); /* Khi hover, phóng to và hiển thị văn bản */
+transform: translate(-50%, -50%) scale(1.1); /* Khi hover, phóng to và hiển thị văn bản */
 
 }
 .span:hover{
-transform: scale(1.2);
+transform: scale(1.1);
 }
 .text-span:hover{
 color: aliceblue;
@@ -744,7 +742,7 @@ color: rgb(240, 56, 56);
 display: inline-block;
 width: 100%;height: auto;
 background-color: rgba(0, 0, 0, 0.762);
-font-size: 20px;
+/* font-size: 20px; */
 }
 .item-mxh-icon{
 font-size: 1.2em;
@@ -752,7 +750,7 @@ font-size: 1.2em;
 
 /* ///////////////////////////////////// */
 
-@media only screen and (max-width:2500px  ) {
+@media only screen and (max-width:2000px  ) {
      input#search-Menu{
           display: inline-block;
           margin-top: -199px;
@@ -780,7 +778,7 @@ font-size: 1.2em;
           /*background-color: rgb(238, 151, 38);*/
           background-color: #be7b48;
           object-position: right ;
-          width: 100%;height: 7em;
+          width: 100%;height: 5.5em;
           /*opacity:  0.855;*/
           text-align: center;
           margin: 0;
@@ -789,7 +787,7 @@ font-size: 1.2em;
      }
      img.logo_ {
           display:  inline-block;
-          height: 5.5em;width: 5.5em;
+          height: 5em;width: 5em;
      }
      input#search-Menu{
           margin-top: 2%;
@@ -814,21 +812,18 @@ font-size: 1.2em;
           font-size: 25px;
      }
      .span{
-          width: 350px;
-          height: 400px;
+          width: 250px;
+          height: 350px;
      }
      .span-blog{
-          width: 550px;
-          height: 400px;
+          width: 350px;
+          height: 250px;
      }
      .input-Contacts{
           padding: 20px;
           margin-bottom: 25px;
      }
      .text-mar-Contacts{
-          font-size: 25px;
-     }
-     .Footer{
           font-size: 25px;
      }
 } 
@@ -869,16 +864,15 @@ font-size: 1.2em;
      }
      #mobile_menu{
           display: block;
-     }   
+     } 
+     .Search_Menu{
+          width: 50px;
+     }  
 }   
 
 @media only screen and (max-width: 800px) {
      .Search_Menu{
-          margin-left: 5px ;
-     }
-     input#search-Menu {
-          width: 150px;
-          /* height: 0px; */
+          display: none;
      }
      #logo_user.material-symbols-outlined{
           display: inline-block;
@@ -949,6 +943,56 @@ font-size: 1.2em;
      }
 
 }
+@media only screen and (max-width:950px ) {
+     input#search-Menu{
+          width: 170px;
+     }
+     .buy{
+          font-size: 25px;
+          top: 30px;
+     }
+     #logo_user.material-symbols-outlined{
+          font-size: 45px;
+          top: 42px;
+     }
+}
+@media only screen and (max-width:650px  ) {
+     .Menu-Bard{
+          display:  block;
+          margin-top: -25%;
+          margin-left: -75%;
+          font-size: 25px;
+
+     }
+     a.link-Menu, h2{
+          display: none;
+
+     }
+     .Home{
+          padding-top: 90px;
+     }
+     .text-Home{
+          display: none;
+     }
+     .buy{
+          display: inline-block;
+          top: 30px;right: 25px;
+          font-size: 20px;
+          opacity: 1.0;
+     }
+
+     #logo_user.material-symbols-outlined{
+          display: inline-block;
+          top: 50px;
+          font-size: 35px;
+          opacity: 1.0;
+     }
+     .text-Contacts{
+          width: 80%;
+          left: 10%;
+     }
+     
+}
 @media only screen and (max-width: 428px){
      a.link-Menu, h2{
           display: none;
@@ -986,7 +1030,7 @@ font-size: 1.2em;
           margin-bottom: 5px;
      }     
      .span:hover{
-               transform: scale(1.1);
+               transform: scale(1.05);
      }
      .span-blog{
           margin-bottom: 10px;
@@ -1011,13 +1055,23 @@ font-size: 1.2em;
      }
 }
 
-@media only  screen and (max-width:375px){
+@media only screen and (max-width:428px  ) {
+
      .fab{
           color: rgba(0, 0, 255, 0.674);
           font-size: 40px;
      }
+     .Search_Menu{
+          margin-left: -2px;
+     }
      .text_sp{
           font-size: 100%;
+     }
+     .Home-img{
+          margin-top: -10px;
+     }
+     .ShopNow{
+          display: none;
      }
      .Brad-Menu{
           float: left;
@@ -1026,6 +1080,10 @@ font-size: 1.2em;
           margin-left: 50%;
           color: white;
      }
+     .text-Home{
+          display: none;
+     }
+     
 }
 @media only screen and (max-width: 320px){
      .Brad-Menu{

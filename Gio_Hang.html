@@ -70,6 +70,7 @@
         .cart .checkout {
             margin-top: 20px;
             width: 100%;
+            height: 50px;
         }
         
         .total {
@@ -88,8 +89,34 @@
           text-decoration: none;
           color: white;
         }
-        .checkout:hover .link{
+        .link:hover{
           color: red;
+        }
+        .luachon{
+            display: inline-block;
+            font-size: 20px;
+        }
+        .text-luachon{
+            font-size: 20px;
+        }
+        .radio_div{
+            display:block;
+            padding: 20px;
+        }
+        .input[type="radio"]{
+            display: inline-block;
+            padding: 10px;
+            font-size: 20px
+        }
+        .address{
+            display: inline-block;
+            padding: 20px;
+        }
+        .khung_address{
+            display: inline-block;
+            padding: 10px;
+            width: 65%;
+            margin-bottom: 20px;
         }
         
     </style>
@@ -157,7 +184,31 @@
             <div class="total">
                 <h3>Tổng cộng: <span class="total-amount">195.000đ</span></h3>
             </div>
-            <button class="checkout"><a class="link" href="thanhtoan.html" target="_blank">Thanh toán</a></button>
+            <div class="address">
+                <input class="khung_address" type="text" placeholder="Họ và tên(*)">
+                <select class="khung_address" name="city" id="city">
+                    <option value="HN">Hà Nội</option>
+                    <option value="Hnam">Hà Nam</option>
+                    <option value="Tq">Tuyên Quang</option>
+                    <option value="Hp">Hưng Yên</option>
+                    <option value="Hy">Hải Phòng</option>
+                    <option value="Hd">Hải Dương</option>
+                    <option value="Ht">Hà Tĩnh</option>
+                </select>
+                <input class="khung_address" type="text" placeholder="Địa chỉ cụ thể">
+                <input class="khung_address" type="text" placeholder="Số Điện Thoại">
+                <input class="khung_address" type="text" placeholder="Email (*)">
+            </div>
+            <hr>
+            <div class="luachon">
+                <label class="text-luachon" for="luachonbuy">Lựa chọn cách thanh toán</label>
+                <div class="radio_div">
+                <input type="radio" name="tung">Tiền mặt <br>
+                <input type="radio" name="tung">Chuyển khoản
+                </div>
+            </div>
+            <!-- <button class="checkout"><a class="link" href="thanhtoan.html" target="_blank">Thanh toán</a></button> -->
+            <a class="link" href="thanhtoan.html" target="_blank"><button class="checkout">Thanh toán</button></a>
         </section>
     </main>
     <br><br><br><br>

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/Home.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Register</title>
   <style>
     *{
       padding: 0;
@@ -24,6 +24,7 @@
       object-fit: cover;
       width: 100%;
       height: auto;
+
     }
     .text-logo{
       display: inline-block;
@@ -183,6 +184,7 @@
     @media only screen and (max-width: 428px){
     form{
       margin-top: -170px;
+    height:auto;
     }
   }
     @media only screen and (max-width: 1280px){
@@ -191,13 +193,25 @@
     }
     
     }
+    @media only screen and (max-width: 390px){
+        .form-box{
+      object-fit: cover;
+      width: auto;
+      height: auto;
+     
+
+    }
+    }
+    
+
   
   </style>
 </head>
 <body>
   <div class="hed">
     <div class="logo">
-      <a href="Coffee.html"><img class="logo_" src="img/logo.jpg" alt=""></a></div>
+      <a href="Coffee.html"><img class="logo_" src="img/logo.jpg" alt=""></a>
+       </div>
     <div class="text_coffee">
          <h1 class="tung" >Coffee Place</h1>
          <p class="tung">Vì sức khỏe vì tương lai</p>
@@ -216,23 +230,25 @@
 <div class="form-box">
   <div class="form-value">
       <form action="">
-          <h2>ĐĂNG NHẬP</h2>
+          <h2>ĐĂNG KÝ</h2>
+         
           <div class="inputbox">
-              <ion-icon name="mail"></ion-icon>
-              <input type="text" required>
-              <label for="">Số điện thoại</label>
-          </div>
-          <div class="inputbox">
-              <ion-icon name="lock"></ion-icon>
-              <input type="password" required>
-              <label for="">Mật khẩu</label>
-          </div>
+            <ion-icon name="phone"></ion-icon>
+            <input type="text" required>
+            <label for="">Số điện thoại</label>
+        </div>
+        <div class="inputbox">
+          <ion-icon name="pass"></ion-icon>
+          <input type="text" required>
+          <label for="">Mật khẩu</label>
+      </div>
+         
           <div class="forget">
-              <label for=""><input type="checkbox">Ghi nhớ <a style="color: red; font-weight: bold;" href="#">Quên mật khẩu</a></label>
+              <label for=""><input type="checkbox"> Tôi đồng ý với các điều khoản </label>
           </div>
-          <button>Đăng nhập</button>
+          <button>Đăng ký</button>
           <div class="register">
-              <p>Chưa có tài khoản? <a class="link-a" href="dangky.html">Đăng ký ngay</a></p>
+           
           </div>
       </form>
   </div>

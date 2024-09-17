@@ -1,0 +1,381 @@
+*{
+     padding: 0;margin: 0;
+     box-sizing: border-box;
+}
+/* root */
+:root{
+     --tong-text-color: rgba(255, 255, 255, 0.678);
+     --body-color: rgb(222, 214, 214);
+     --hed-color: #be7b48;
+}
+.h2_footer{
+     border-radius: 10px;
+}
+/*  San-Pham */
+.Tong-San-Pham{
+     float: left;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-top: 8%;
+     
+}
+.Tong-Text{
+     margin-left: 5%;
+     float: left;
+     width: 650px;
+     height: 100%;
+     background-color:rgba(255, 255, 255, 0.678);
+     border-radius: 10px 10px 10px 10px;
+
+     /* border: 2px solid black; */
+}
+.San-Pham{
+     border: 1px solid white;
+     float: left;
+     width: 660px;
+     height: 450px;
+     /* background: rgb(98,96,120);
+     background: rgb(34,193,195);
+     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+     background-color: #be814861;
+     border-radius: 10px 120px 10px 10px;
+     transition: all 0.2s linear;
+}
+
+.San-Pham:hover .img-San-Pham{
+     transform: scale(1.1);
+}    
+.img-San-Pham{
+     width: 40%;
+     height: 450px;
+     transform: translate(-50% -50%);
+     text-align: center;
+     margin-left: 25%;
+     transition: all 0.2s linear;
+}
+i.Fab{
+     font-size: 25px;
+}
+.icon-San-Pham{
+     color: black;
+
+}
+.text-title{
+     text-align: center;
+     display: inline-block;
+     font-size: 40px;
+     color: black;
+     font-weight: bold;
+     padding-bottom: 20px;
+     /* text-decoration: underline; */
+
+}
+.hr-text{
+     width: 90%;
+     font-size: 20px;
+}
+.Star-Tong-Text{
+     padding-top: 20px;
+     padding-left: 20px;
+}
+.link-DanhGia{
+     color: black;
+     text-decoration: none;
+}
+.DanhGia-text:hover{
+     cursor: pointer;
+     /* color: yellow; */
+     text-decoration: underline;
+}
+h1{
+     padding: 20px;
+     color: rgb(255, 121, 3);
+}
+.Thongtin-Tong-Text,.text-main2-Thongtin{
+     margin-left: 3%;
+}
+.text-main-Thongtin{
+     font-weight: bold;
+}
+.link-Thongtin{
+     font-size: 15px;
+     text-decoration: none;
+     color: #0630dc
+}
+.link-Thongtin:hover{
+     text-decoration:underline;
+     color: red;
+}
+.Size-Tong-Text{
+     margin-left: 3%;
+}
+.Size{
+     display: block;
+     position: relative;
+     float: left;
+     font-size: 25px;
+}
+.custom-radio input[type="radio"] {
+     display: none;
+   }
+   
+   .custom-radio .radio-circle {
+     text-align: center;
+     /* justify-content: center; */
+     padding-top: 10px;
+     display: inline-block;
+     width:  40px;
+     height: 40px;
+     border-radius: 50%;
+     border: 2px solid var(--hed-color); 
+     /* top: 4px;  */
+     margin-right: 8px; 
+     cursor: pointer;
+   }
+   
+.custom-radio input[type="radio"]:checked + .radio-circle {
+     color: white;
+     background-color: var(--hed-color);
+}
+input[type="radio"]{
+     display: none;
+}
+.star-label:hover{
+     color: gold;
+}
+input[type="radio"]:checked ~.star-label .star{
+     color: gold;
+}
+.SoLuong{
+     margin-left: 3%;
+     margin-top: 10px;
+}
+.Buy{
+     text-align: center;
+     margin-top: 10px;
+     margin-left: 3%;
+     display: inline-block;
+     margin-left: 15%;
+}
+.button-Buy{
+     cursor: pointer;
+     width: 200%;
+     height: auto;
+     padding: 10px;
+     font-size: 16px;
+     margin-bottom: 20px;
+     transform: translate(-50% -50%);
+     text-align: center;
+     position: relative;
+     border-radius: 10px;
+}
+.button-Buy:hover{
+     color: white;
+     background-color: black;
+}
+.Tong-Mota{
+     display: inline;
+     position: relative;
+     float: left;
+     width: 100%;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+.Sp{
+     float: left;
+     width: 40%;
+     margin-left: 50px;
+}
+.text-Sp{
+     /* text-align: center; */
+
+     width: 100%;
+     height: auto;
+     padding: 20px;
+     /* border: 1px solid  black; */
+     font: 20px;
+     color: black;
+     /* border-radius: 5px 500px 5px 500px; */
+     background-color: var(--body-color);
+     /* background-color: rgba(0, 0, 0, 0.075); */
+     /* border-radius: 20px 20px 0px 0px ; */
+}
+.text-Product-Sp{
+     font-size: 26px;
+     text-align: center;
+     padding: 10px;
+     width: 99.5%;
+     border-radius: 0px 0px   20px 20px ;
+     border: 1px solid var(--tong-text-color);
+     background-color: var(--tong-text-color);
+}
+.Mota{
+     padding: 40px;
+     display: inline-block;
+     position: relative;
+     text-align: center;
+     width: 100%;
+}
+.Mota::after{
+     content: "";
+     width: 100%;
+     height: 1px;
+     background-color: white;
+     position: absolute;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     
+    
+}
+.text-Mota{
+     display: inline-block;
+     background-color: var(--body-color);
+     position: relative;
+     z-index: 99;
+     font-size: 30px;
+     padding-left:10px;
+     padding-right:10px;
+     padding-bottom: 10px;
+}
+.Tong-text-Mota{
+     display: inline-block;
+     /* text-align: center; */
+     line-height: 20px;
+     padding: 20px;
+     width: 100%;
+     word-break:normal;
+
+}
+.text-h2{
+     font-size: 25px;
+     font-weight: bold;
+     border:  none;
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+.Nhan-Xet{
+     padding: 40px;
+     display: inline-block;
+     position: relative;
+     text-align: center;
+     width: 100%;
+}
+.Nhan-Xet::after{
+     content: "";
+     width: 100%;
+     height: 1px;
+     background-color: white;
+     position: absolute;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     
+    
+}
+.text-Nhan-Xet{
+     display: inline-block;
+     background-color: var(--body-color);
+     position: relative;
+     z-index: 99;
+     font-size: 27px;
+     padding-left:10px;
+     padding-right:10px;
+     padding-bottom: 10px;
+}
+.div-star{
+     float: left;
+     width: 30%;
+     padding:10px;
+     height: 150px;
+     border-right: 1px solid rgba(0, 0, 0, 0.321);
+}
+.text-star{
+     margin-top: 10px;
+     text-align: none;
+     font-size: 70px;
+     margin-left: 45%;
+}
+.text-star-small{
+     font-size: 15px;
+     margin-left: 45%;
+}
+.ngoi-sao{
+     margin-left: 20px;
+     padding: 5px;
+}
+.star-nhan-xet{
+     margin-left: 20px;
+}
+.sao5{
+     color:rgb(255 111 0);
+}
+.Sp-Khac{
+     margin-top: 50px;
+}
+/* /////////////////// @ meadia */
+@media screen and (max-width:1280px){
+     .Tong-Text{
+          margin-left: 5%;
+          margin-top: 2%;
+
+          float: left;
+          width: 650px;
+          height: 100%;
+          background-color:rgba(255, 255, 255, 0.678);
+          border-radius: 10px 10px 10px 10px;
+     }
+}
+@media only screen and (max-width:  1114px) {
+     .Tong-Text{
+          margin-top: 120px;
+     }
+}
+@media only screen and (max-width:  884px) {
+     .Tong-Text{
+          margin-top: 5%;
+     }
+     .Tong-San-Pham{
+          float: left;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 11%;
+          
+     }
+}
+@media only screen and (max-width:768px  ) {
+     .Tong-San-Pham{
+          margin-top: 15%;
+     }
+
+}
+@media only screen and (max-width:  428px) {
+     .Tong-San-Pham{
+          float: left;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 30%;  
+     }
+     .San-Pham{
+          height: 300px;
+     }
+     .img-San-Pham{
+          height: 90%;
+
+     }
+     .button-Buy{
+          width: 100%;
+     }
+     .Tong-text-Mota{
+          text-align: justify;
+     }
+     .div-star{
+          width: 40%;
+     }
+}
